@@ -19,6 +19,141 @@
 
 ![마인드맵](/assets/mindmap.png)
 
+## 빌드 / 코드 품질
+
+Java 25 + Kotlin 2.3 + Gradle 9.4.1 기반의 Gradle 프로젝트입니다.
+**Spotless** 하나로 Java와 Kotlin 포맷팅을 통합하고, **Checkstyle**로 Java 정적 분석을 수행합니다.
+
+### 도구 구성
+
+| 도구 | 역할 | 대상 |
+|------|------|------|
+| [Spotless](https://github.com/diffplug/spotless) + [google-java-format](https://github.com/google/google-java-format) | 자동 포맷팅 | `src/**/*.java`, `test/**/*.java` |
+| [Spotless](https://github.com/diffplug/spotless) + [ktlint](https://pinterest.github.io/ktlint/) | 자동 포맷팅 | `src/**/*.kt` |
+| [Checkstyle](https://checkstyle.org) | 정적 분석 (네이밍·import·코드 품질) | `src/**/*.java`, `test/**/*.java` |
+
+> **ktlint 플러그인을 별도로 쓰지 않는 이유**
+> Spotless가 ktlint 엔진을 내장하고 있어 기능이 동일합니다. `./gradlew spotlessApply` 하나로 Java와 Kotlin을 동시에 처리할 수 있어 설정을 단순하게 유지합니다.
+
+---
+
+### Spotless — 자동 포맷팅
+
+**Java**: google-java-format AOSP 모드 (4-space 들여쓰기)
+**Kotlin**: ktlint (4-space 들여쓰기)
+
+```bash
+# 파일을 직접 수정해 포맷을 맞춤 (커밋 전 실행)
+./gradlew spotlessApply
+
+# 포맷이 올바른지 검사만 수행 (파일 수정 없음, CI 용)
+./gradlew spotlessCheck
+```
+
+`spotlessApply`가 자동으로 처리하는 항목:
+
+- 들여쓰기·공백 정규화
+- 미사용 `import` 제거
+- 줄 끝 공백 제거
+- 파일 끝 개행 보장
+- Kotlin 코드 ktlint 스타일 정렬
+
+#### 이 프로젝트에서 비활성화한 ktlint 규칙
+
+알고리즘 문제 풀이 특성상 아래 규칙은 비활성화되어 있습니다 (`build.gradle.kts` → `editorConfigOverride`).
+
+| 규칙 | 비활성화 이유 |
+|------|--------------|
+| `class-naming` | 파일명이 문제 번호 기반 (`P1_3`, `P96_2`) |
+| `function-naming` | 문제 인터페이스 메서드명 그대로 사용 (`Front()`, `Push()`) |
+| `property-naming` | 알고리즘 관례 변수 허용 (`N`, `M`, `INF`) |
+| `no-wildcard-imports` | 알고리즘 코드에서 `java.util.*` 관행적 사용 |
+
+---
+
+### Checkstyle — 정적 분석
+
+Spotless가 포맷을 담당하므로 Checkstyle은 **포맷 규칙을 포함하지 않습니다**.
+검사 항목: 미사용·중복 import / 네이밍 컨벤션 / `equals`·`hashCode` 누락 / switch fall-through / 문자열 `==` 비교 / 접근 제어자 순서·중복 / `@Override` 누락 등.
+
+```bash
+# src/ 검사
+./gradlew checkstyleMain
+
+# test/ 검사
+./gradlew checkstyleTest
+```
+
+#### 리포트 읽는 법
+
+Checkstyle 검사 후 아래 경로에 HTML 리포트가 생성됩니다.
+
+```
+build/reports/checkstyle/
+├── main.html    # src/ 결과
+└── test.html    # test/ 결과
+```
+
+브라우저에서 열면 위반 파일·줄 번호·규칙명을 한눈에 확인할 수 있습니다.
+
+```bash
+# macOS에서 바로 열기
+open build/reports/checkstyle/main.html
+```
+
+리포트 항목 예시:
+
+| 항목 | 설명 |
+|------|------|
+| **File** | 위반이 발생한 소스 파일 경로 |
+| **Line** | 해당 줄 번호 (클릭하면 소스 확인 가능) |
+| **Message** | 위반 내용 (`Each variable declaration must be in its own statement` 등) |
+| **Rule** | Checkstyle 규칙 이름 (`MultipleVariableDeclarations`, `RedundantModifier` 등) |
+
+자주 나오는 규칙 설명:
+
+| 규칙 | 의미 | 수정 방법 |
+|------|------|----------|
+| `MultipleVariableDeclarations` | `int a, b;` 한 줄에 여러 변수 선언 | `int a;` `int b;` 로 분리 |
+| `RedundantModifier` | 인터페이스 메서드의 `public abstract` 등 불필요한 제어자 | 해당 제어자 제거 |
+| `ModifierOrder` | `static public` 등 JLS 권장 순서 위반 | `public static`으로 변경 |
+| `UnusedImports` | 사용하지 않는 `import` | 해당 import 제거 |
+| `StringLiteralEquality` | 문자열을 `==`로 비교 | `.equals()`로 변경 |
+| `FallThrough` | `switch` case에 `break` 누락 | `break` 추가 또는 `// falls through` 주석 |
+| `MissingOverride` | 오버라이드 메서드에 `@Override` 없음 | `@Override` 추가 |
+
+#### 특정 줄 억제
+
+부득이하게 규칙을 무시해야 할 경우, 어노테이션으로 억제할 수 있습니다.
+
+```java
+// 특정 규칙 억제
+@SuppressWarnings("checkstyle:MultipleVariableDeclarations")
+int a, b;
+
+// 여러 규칙 동시 억제
+@SuppressWarnings({"checkstyle:RedundantModifier", "checkstyle:ModifierOrder"})
+```
+
+---
+
+### 전체 검사 (Spotless + Checkstyle + 테스트)
+
+```bash
+# spotlessCheck + checkstyleMain + checkstyleTest + test 한 번에 실행
+./gradlew check
+```
+
+### 테스트 실행
+
+```bash
+./gradlew test
+```
+
+테스트 리포트: `build/reports/tests/test/index.html`
+
+---
+
 ## 문제 풀이
 | 번호 | 제목 | 난이도 | 장 | 풀이 코드 |
 | --- | --- | ---- | - | --- |

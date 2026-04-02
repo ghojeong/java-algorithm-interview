@@ -1,7 +1,14 @@
 ### IntelliJ IDEA ###
+.idea/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+
+### Gradle ###
+
+.gradle/
+.kotlin/
+build/
 
 ### Eclipse ###
 .apt_generated
@@ -27,3 +34,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Claude ###
+
+.claude/
