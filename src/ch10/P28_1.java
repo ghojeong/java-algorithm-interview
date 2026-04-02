@@ -10,7 +10,7 @@ public class P28_1 {
         int[] point;
 
         // 거리와 좌표를 파라미터로 받는다.
-        public Point(double distance, int[] point) {
+        Point(double distance, int[] point) {
             this.distance = distance;
             this.point = point;
         }

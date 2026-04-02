@@ -2,7 +2,7 @@ package ch24;
 
 public class P101_2 {
     public int solution(int[][] board, int[][] skill) {
-        int N = board.length;    // 행
+        int N = board.length; // 행
         int M = board[0].length; // 열
         int[][] matrix = new int[N + 1][M + 1];
 
@@ -10,10 +10,10 @@ public class P101_2 {
             // s[0] 값에 따라 공격 또는 회복
             int degree = s[5] * ((s[0] == 1) ? -1 : 1);
 
-            matrix[s[1]][s[2]] += degree;            // 상단   / 좌측
+            matrix[s[1]][s[2]] += degree; // 상단   / 좌측
             matrix[s[1]][s[4] + 1] += (degree * -1); // 상단   / 우측+1
             matrix[s[3] + 1][s[2]] += (degree * -1); // 하단+1 / 좌측
-            matrix[s[3] + 1][s[4] + 1] += degree;    // 하단+1 / 우측+1
+            matrix[s[3] + 1][s[4] + 1] += degree; // 하단+1 / 우측+1
         }
 
         // 누적합 계산
@@ -34,8 +34,7 @@ public class P101_2 {
         int answer = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                if (board[i][j] + matrix[i][j] > 0)
-                    answer++;
+                if (board[i][j] + matrix[i][j] > 0) answer++;
             }
         }
         return answer;

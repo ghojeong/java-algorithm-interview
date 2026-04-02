@@ -6,10 +6,14 @@ import java.util.Deque;
 import java.util.List;
 
 public class P39_1 {
-    public void dfs(List<List<Integer>> results, int[] candidates, int target, int index, Deque<Integer> path) {
+    public void dfs(
+            List<List<Integer>> results,
+            int[] candidates,
+            int target,
+            int index,
+            Deque<Integer> path) {
         // 0 보다 작다면 목푯값을 넘어섰으므로 리턴
-        if (target < 0)
-            return;
+        if (target < 0) return;
         // 0이면 목푯값에 도달했으므로 결과에 추가하고 리턴
         if (target == 0) {
             // 이전 경로를 저장해둔 path를 결과에 삽입

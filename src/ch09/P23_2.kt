@@ -10,8 +10,9 @@ class P23_2 {
         // 엘리먼트 삽입
         queue.add(x)
         // 맨 앞에 두는 상태로 전체 재정렬
-        for (i in 1 until queue.size)
+        for (i in 1 until queue.size) {
             queue.add(queue.remove())
+        }
     }
 
     fun pop(): Int {

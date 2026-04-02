@@ -1,7 +1,6 @@
 package ch14;
 
 import datatype.TreeNode;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -9,8 +8,7 @@ public class P52_1 {
     // 직렬화
     public String serialize(TreeNode root) {
         // 예외 처리
-        if (root == null)
-            return "";
+        if (root == null) return "";
 
         // 반복 BFS 처리를 위한 큐 선언
         Queue<TreeNode> queue = new LinkedList<>();
@@ -48,8 +46,7 @@ public class P52_1 {
     // 역직렬화
     public TreeNode deserialize(String data) {
         // 예외 처리
-        if (data.equals(""))
-            return null;
+        if (data.equals("")) return null;
 
         // 콤마(,) 기준으로 자른 문자열 배열 선언
         String[] nodes = data.split(",");

@@ -11,11 +11,11 @@ public class P73_1 {
             // 합이 target보다 작으면 왼쪽 포인터를 오른쪽으로 이동
             if (numbers[left] + numbers[right] < target) {
                 left += 1;
-            // 합이 target보다 크면 오른쪽 포인터를 왼쪽으로 이동
+                // 합이 target보다 크면 오른쪽 포인터를 왼쪽으로 이동
             } else if (numbers[left] + numbers[right] > target) {
                 right -= 1;
             } else {
-                return new int[]{left + 1, right + 1};
+                return new int[] {left + 1, right + 1};
             }
         }
         return null;

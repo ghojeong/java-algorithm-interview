@@ -5,6 +5,7 @@ import java.util.*
 class P24_2 {
     // 삽입할 때 사용하는 스택 선언
     val input: Deque<Int> = ArrayDeque()
+
     // 추출할 때 사용하는 스택 선언
     val output = ArrayDeque<Int>()
 

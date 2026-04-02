@@ -22,12 +22,16 @@ class P79_2 {
             when {
                 // 11110으로 시작하면 나머지가 3바이트여야 한다.
                 first shr 3 == 30 && check(3) -> start += 4
+
                 // 1110으로 시작하면 나머지가 2바이트여야 한다.
                 first shr 4 == 14 && check(2) -> start += 3
+
                 // 110으로 시작하면 나머지가 1바이트여야 한다.
                 first shr 5 == 6 && check(1) -> start += 2
+
                 // 1바이트 문자
                 first shr 7 == 0 -> start++
+
                 else -> return false
             }
         }

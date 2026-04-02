@@ -31,8 +31,9 @@ class P45_3 {
             var k_visited = cur[2]
 
             // 만약 큐에서 추출한 값이 도착지 dst라면 정답으로 리턴
-            if (u == dst)
+            if (u == dst) {
                 return price_u
+            }
 
             // 도착지(u)까지 진행 경로(k_visited) 저장, 따로 저장해두진 않지만 비용(price_u)이 가장 저렴한 경로다.
             visited[u] = k_visited

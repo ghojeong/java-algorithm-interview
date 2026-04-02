@@ -7,14 +7,11 @@ public class P70_2 {
             // 중앙의 위치 계산 개선
             int mid = left + (right - left) / 2;
             // 만약 중앙값이 타깃보다 작으면, 포인터를 우측으로 옮겨서 다시 탐색
-            if (nums[mid] < target)
-                return binarySearch(nums, target, mid + 1, right);
+            if (nums[mid] < target) return binarySearch(nums, target, mid + 1, right);
             // 만약 중앙값이 타깃보다 크다면, 포인터를 좌측으로 옮겨서 다시 탐색
-            else if (nums[mid] > target)
-                return binarySearch(nums, target, left, mid - 1);
+            else if (nums[mid] > target) return binarySearch(nums, target, left, mid - 1);
             // 정답을 찾은 경우이므로 결과 리턴
-            else
-                return mid;
+            else return mid;
         } else
             // 모두 탐색했으나 정답을 찾지 못한 경우로 -1 리턴
             return -1;

@@ -17,8 +17,7 @@ public class P81_2 {
             // 윈도우 데크에 삽입
             window.add(nums[i]);
             // 현재 위치가 슬라이딩 윈도우 크기 안에 있다면 스킵
-            if (i < k - 1)
-                continue;
+            if (i < k - 1) continue;
             // 최댓값이 초깃값이라면 최댓값 다시 설정
             if (currentMax == Integer.MIN_VALUE) {
                 // 자바 8+ 스트림 이용 데크의 최댓값 얻기
@@ -30,8 +29,7 @@ public class P81_2 {
             // 최댓값을 정답으로 추가
             result.add(currentMax);
             // 큐에서 가장 오래된 값을 삭제하면서, 최댓값이 큐에서 빠진다면 다음번에 다시 구해야 하므로 최댓값 초기화
-            if (currentMax == window.poll())
-                currentMax = Integer.MIN_VALUE;
+            if (currentMax == window.poll()) currentMax = Integer.MIN_VALUE;
         }
         // List<Integer> → int[] 변환하여 리턴
         return result.stream().mapToInt(Integer::intValue).toArray();

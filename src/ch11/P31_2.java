@@ -9,11 +9,9 @@ class P31_2 {
         Set<Character> freqs = new HashSet<>();
 
         // 보석(J) 종류 저장
-        for (char j : J.toCharArray())
-            freqs.add(j);
+        for (char j : J.toCharArray()) freqs.add(j);
         // 돌(S)이 보석(J)인 경우 +1
-        for (char s : S.toCharArray())
-            if (freqs.contains(s)) count++;
+        for (char s : S.toCharArray()) if (freqs.contains(s)) count++;
         return count;
     }
 }

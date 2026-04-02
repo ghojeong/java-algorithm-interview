@@ -1,7 +1,7 @@
 package ch06
 
 class P2_2 {
-    fun reverseString(s: CharArray): Unit {
+    fun reverseString(s: CharArray) {
         var start = 0
         var end = s.size - 1
         // 서로 중앙으로 이동해 나가다 겹치는 지점에 도달하면 종료

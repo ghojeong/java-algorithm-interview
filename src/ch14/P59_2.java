@@ -1,7 +1,6 @@
 package ch14;
 
 import datatype.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +17,10 @@ public class P59_2 {
         // 왼쪽 자식 노드부터 진행
         node.left = dfs(preOrder.subList(1, inIndex + 1), inOrder.subList(0, inIndex));
         // 오른쪽 자식 노드 진행
-        node.right = dfs(preOrder.subList(inIndex + 1, preOrder.size()), inOrder.subList(inIndex + 1, inOrder.size()));
+        node.right =
+                dfs(
+                        preOrder.subList(inIndex + 1, preOrder.size()),
+                        inOrder.subList(inIndex + 1, inOrder.size()));
 
         return node;
     }
@@ -29,10 +31,8 @@ public class P59_2 {
         List<Integer> inOrder = new ArrayList<>();
 
         // 정수형 배열을 리스트에 삽입하여 변환
-        for (int pre : preorder)
-            preOrder.add(pre);
-        for (int in : inorder)
-            inOrder.add(in);
+        for (int pre : preorder) preOrder.add(pre);
+        for (int in : inorder) inOrder.add(in);
 
         // 재귀 DFS 진행, 리스트로 처리하면 파라미터가 간결해진다.
         return dfs(preOrder, inOrder);

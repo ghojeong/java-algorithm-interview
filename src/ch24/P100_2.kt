@@ -37,8 +37,9 @@ class P100_2 {
                     // 현재 처리 중 노드는 값을 찾아서 삭제
                     candidateNodes.remove(nextNode)
                     // 방문 가능한 노드 추가
-                    if (graph[nextNode] != null)
+                    if (graph[nextNode] != null) {
                         candidateNodes.addAll(graph[nextNode]!!)
+                    }
 
                     // 큐 삽입(BFS)
                     queue.offer(Node(nextNode, nextSheep, nextWolves, candidateNodes))

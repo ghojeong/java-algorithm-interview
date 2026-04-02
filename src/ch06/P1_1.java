@@ -12,7 +12,8 @@ class P1_1 {
             } else if (!Character.isLetterOrDigit(s.charAt(end))) {
                 end--;
             } else { // 유효한 문자라면 앞 글자와 뒷 글자를 모두 소문자로 변경해 비교
-                if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))) {
+                if (Character.toLowerCase(s.charAt(start))
+                        != Character.toLowerCase(s.charAt(end))) {
                     // 하나라도 일치하지 않는다면 팰린드롬이 아니므로 false 리턴
                     return false;
                 }

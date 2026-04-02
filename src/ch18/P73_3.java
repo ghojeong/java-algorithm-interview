@@ -12,7 +12,7 @@ public class P73_3 {
             int idx = Arrays.binarySearch(numbers, i + 1, numbers.length, expected);
             // 인덱스가 0 이상인 값이면 찾은 것이므로 결과 리턴
             if (idx >= 0) {
-                return new int[]{i + 1, idx + 1};
+                return new int[] {i + 1, idx + 1};
             }
         }
         return null;

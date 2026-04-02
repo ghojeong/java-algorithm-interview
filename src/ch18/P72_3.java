@@ -18,10 +18,8 @@ public class P72_3 {
         // i는 nums1에 대한 포인터, j는 nums2에 대한 포인터. 둘 다 유효한 경우 반복
         while (i < nums1.length && j < nums2.length) {
             // 값이 작은 쪽의 포인터가 앞으로 이동
-            if (nums1[i] > nums2[j])
-                j++;
-            else if (nums1[i] < nums2[j])
-                i++;
+            if (nums1[i] > nums2[j]) j++;
+            else if (nums1[i] < nums2[j]) i++;
             // 일치하는 경우이므로 결과 삽입 후 포인터 모두 이동
             else {
                 result.add(nums1[i]);

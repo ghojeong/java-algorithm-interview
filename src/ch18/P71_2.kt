@@ -13,6 +13,7 @@ class P71_2 {
             when {
                 // 만약 중앙값이 우측값보다 크다면 왼쪽 포인터 이동
                 nums[mid] > nums[right] -> left = mid + 1
+
                 // 반대의 경우에는 오른쪽 포인터 이동
                 else -> right = mid
             }
@@ -33,8 +34,10 @@ class P71_2 {
             when {
                 // 만약 피벗 중앙값이 타깃보다 작으면, 왼쪽 포인터를 중앙으로 이동
                 nums[midPivot] < target -> left = mid + 1
+
                 // 만약 피벗 중앙값이 타깃보다 크다면, 오른쪽 포인터를 중앙으로 이동
                 nums[midPivot] > target -> right = mid - 1
+
                 // 정답을 찾은 경우이므로 결과 리턴
                 else -> return midPivot
             }

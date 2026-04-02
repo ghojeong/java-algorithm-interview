@@ -8,8 +8,7 @@ public class P48_1 {
 
     public int dfs(TreeNode node) {
         // 예외 처리
-        if (node == null)
-            return -1;
+        if (node == null) return -1;
         // 왼쪽, 오른쪽의 각 리프 노드까지 재귀 DFS
         int left = dfs(node.left);
         int right = dfs(node.right);

@@ -13,7 +13,7 @@ public class FractionalKnapsackExample {
         // 단가($/kg)
         float unitPrice;
 
-        public Cargo(int price, int weight) {
+        Cargo(int price, int weight) {
             this.price = price;
             this.weight = weight;
         }

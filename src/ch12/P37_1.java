@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class P37_1 {
-    public void dfs(List<List<Integer>> results, List<Integer> prevElements, List<Integer> elements) {
+    public void dfs(
+            List<List<Integer>> results, List<Integer> prevElements, List<Integer> elements) {
         // 리프 노드에 도달하면 결과에 추가
         if (elements.isEmpty()) {
             // 자바 8+의 스트림을 이용해 prevElements의 내용을 결과에 삽입

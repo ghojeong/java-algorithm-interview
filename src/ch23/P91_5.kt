@@ -9,8 +9,9 @@ class P91_5 {
         if (n <= 1) return n
 
         // 미리 계산한 결과가 있다면 해당 값 리턴
-        if (dp[n] != 0)
+        if (dp[n] != 0) {
             return dp[n]
+        }
         dp[n] = fib(n - 1) + fib(n - 2)
         return dp[n]
     }

@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 public class P43_1 {
-    public boolean dfs(Map<Integer, List<Integer>> finishToTakeMap, Integer finish, List<Integer> takes) {
+    public boolean dfs(
+            Map<Integer, List<Integer>> finishToTakeMap, Integer finish, List<Integer> takes) {
         // 완료해야 하는 노드가 처리해야 하는 노드에 이미 포함되어 있다면
         // 그래프가 순환 구조이므로 false 리턴
-        if (takes.contains(finish))
-            return false;
+        if (takes.contains(finish)) return false;
 
         // 완료해야 하는 코스에 값이 있다면
         if (finishToTakeMap.containsKey(finish)) {
@@ -19,8 +19,7 @@ public class P43_1 {
             // 처리해야 하는 노드 순회
             for (Integer take : finishToTakeMap.get(finish)) {
                 // 재귀 DFS, 탐색 결과가 false라면 false를 리턴한다.
-                if (!dfs(finishToTakeMap, take, takes))
-                    return false;
+                if (!dfs(finishToTakeMap, take, takes)) return false;
             }
             // 탐색 후에는 처리했으므로 노드 제거
             takes.remove(finish);
@@ -44,8 +43,7 @@ public class P43_1 {
         // 완료해야 하는 노드 순회
         for (Integer finish : finishToTakeMap.keySet()) {
             // DFS 결과가 false라면 최종 결과도 false로 리턴
-            if (!dfs(finishToTakeMap, finish, takes))
-                return false;
+            if (!dfs(finishToTakeMap, finish, takes)) return false;
         }
         // 모든 코스에 문제가 없으므로 true 리턴
         return true;

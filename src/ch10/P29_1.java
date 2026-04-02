@@ -13,15 +13,13 @@ public class P29_1 {
         int answer = 0;
         while (pq.size() >= 2) {
             // 가장 안 매운 음식이 K 이상이면 정답 리턴
-            if (pq.peek() >= K)
-                return answer;
+            if (pq.peek() >= K) return answer;
             // 두 음식을 섞어서 새로운 음식을 만들어 삽입
             pq.add(pq.poll() + (pq.poll() * 2));
             answer++;
         }
         // 모두 섞었음에도 K를 넘지 않는다면 -1 리턴
-        if (pq.peek() < K)
-            return -1;
+        if (pq.peek() < K) return -1;
         return answer;
     }
 }

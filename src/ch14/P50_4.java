@@ -1,15 +1,13 @@
 package ch14;
 
 import datatype.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class P50_4 {
     public TreeNode invertTree(TreeNode root) {
         // 예외 처리
-        if (root == null)
-            return null;
+        if (root == null) return null;
 
         // 반복 DFS 처리를 위한 스택 선언
         Deque<TreeNode> stack = new ArrayDeque<>();
@@ -26,11 +24,9 @@ public class P50_4 {
             node.right = temp;
 
             // 왼쪽 자식노드가 널이 아니면 스택 삽입
-            if (node.left != null)
-                stack.push(node.left);
+            if (node.left != null) stack.push(node.left);
             // 오른쪽 자식노드가 널이 아니면 스택 삽입
-            if (node.right != null)
-                stack.push(node.right);
+            if (node.right != null) stack.push(node.right);
         }
         return root;
     }

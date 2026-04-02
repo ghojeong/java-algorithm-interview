@@ -10,17 +10,14 @@ public class LambdaExpressionSortExample {
         String name;
         int age;
 
-        public Member(String name, int age) {
+        Member(String name, int age) {
             this.name = name;
             this.age = age;
         }
 
         @Override
         public String toString() {
-            return "Member{" +
-                    "name='" + name + '\'' +
-                    ", age=" + age +
-                    '}';
+            return "Member{" + "name='" + name + '\'' + ", age=" + age + '}';
         }
     }
 
@@ -32,12 +29,14 @@ public class LambdaExpressionSortExample {
         members1.add(new Member("닝닝", 22));
 
         // 정렬을 익명 클래스로 구현
-        Collections.sort(members1, new Comparator<Member>() {
-            @Override
-            public int compare(Member o1, Member o2) {
-                return o2.age - o1.age;
-            }
-        });
+        Collections.sort(
+                members1,
+                new Comparator<Member>() {
+                    @Override
+                    public int compare(Member o1, Member o2) {
+                        return o2.age - o1.age;
+                    }
+                });
 
         System.out.println(members1);
 

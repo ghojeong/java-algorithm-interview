@@ -6,7 +6,7 @@ class P4_2 {
         val counts: MutableMap<String, Int> = mutableMapOf()
 
         // 전처리 작업 후 단어 목록을 배열로 저장
-        val words = paragraph.replace("\\W+".toRegex(), " ").toLowerCase().trim().split("\\s+")
+        val words = paragraph.replace("\\W+".toRegex(), " ").lowercase().trim().split("\\s+")
 
         for (w in words) {
             // 금지된 단어가 아닌 경우 개수 처리

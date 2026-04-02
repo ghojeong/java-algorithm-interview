@@ -3,8 +3,7 @@ package ch23;
 public class P95_1 {
     public int solution(int[] money) {
         // 입력값이 1개인 경우 예외 처리
-        if (money.length == 1)
-            return money[0];
+        if (money.length == 1) return money[0];
 
         int[][] dp = new int[2][money.length];
         dp[0][0] = 0; // 첫 번째 값은 사용하지 않음

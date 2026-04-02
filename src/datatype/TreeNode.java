@@ -55,7 +55,7 @@ public class TreeNode {
             print_r(node.left, level + 1, sb);
         }
     }
-    
+
     public String prettyPrint() {
         StringBuilder sb = new StringBuilder();
         print_r(this, 0, sb);

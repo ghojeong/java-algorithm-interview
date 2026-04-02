@@ -13,7 +13,7 @@ public class P63_2 {
         // 팰린드롬인 단어 ID를 목록으로 저장하는 변수
         List<Integer> palindromeWordIds;
 
-        public TrieNode() {
+        TrieNode() {
             // 단어 ID의 초깃값은 의미 없는 값으로 선언
             wordId = -1;
             // 자식 노드는 알파벳의 개수인 최대 26개까지 가능
@@ -27,7 +27,7 @@ public class P63_2 {
         TrieNode root;
 
         // 클래스 생성시 루트로 빈 트라이 노드 생성
-        public Trie() {
+        Trie() {
             root = new TrieNode();
         }
 
@@ -77,21 +77,20 @@ public class P63_2 {
             for (int j = 0; j < word.length(); j++) {
                 // (3) 탐색 중에 단어 ID가 있고(그림에서 w), 나머지 문자가 팰린드롬인 경우
                 if (cur.wordId >= 0 && isPalindrome(word, j, word.length() - 1)) {
-                    result.add(Arrays.asList(new Integer[]{index, cur.wordId}));
+                    result.add(Arrays.asList(new Integer[] {index, cur.wordId}));
                 }
                 // 자식 노드가 없으면 더 이상 팰린드롬이 아니므로 지금까지의 결과를 리턴하면서 중단
-                if (cur.children[word.charAt(j) - 'a'] == null)
-                    return result;
+                if (cur.children[word.charAt(j) - 'a'] == null) return result;
                 // 자식 노드를 현재 노드로 교체
                 cur = cur.children[word.charAt(j) - 'a'];
             }
             // (1) 끝까지 탐색했을 때 단어 ID가 있는 경우(그림에서 w)
             if (cur.wordId >= 0 && cur.wordId != index) {
-                result.add(Arrays.asList(new Integer[]{index, cur.wordId}));
+                result.add(Arrays.asList(new Integer[] {index, cur.wordId}));
             }
             // (2) 끝까지 탐색했을 때 팰린드롬 단어 ID가 있는 경우(그림에서 p)
             for (int palindromeWordId : cur.palindromeWordIds) {
-                result.add(Arrays.asList(new Integer[]{index, palindromeWordId}));
+                result.add(Arrays.asList(new Integer[] {index, palindromeWordId}));
             }
             // 결과 리턴
             return result;

@@ -19,9 +19,11 @@ class P55_2 {
         }
 
         // 예외 처리
-        return if (nums.isEmpty()) null
-        else
+        return if (nums.isEmpty()) {
+            null
+        } else {
             // 배열 전체를 넘겨서 트리 생성 시작
             construct(0, nums.size - 1)
+        }
     }
 }

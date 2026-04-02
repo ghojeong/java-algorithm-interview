@@ -9,8 +9,9 @@ class P48_2 {
 
         fun dfs(node: TreeNode?): Int {
             // 예외 처리
-            if (node == null)
+            if (node == null) {
                 return -1
+            }
             // 왼쪽, 오른쪽의 각 리프 노드까지 재귀 DFS
             val left = dfs(node.left)
             val right = dfs(node.right)

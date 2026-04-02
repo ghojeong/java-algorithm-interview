@@ -28,8 +28,7 @@ public class P45_1 {
             int k_visited = cur.get(2);
 
             // 만약 큐에서 추출한 값이 도착지 dst라면 정답으로 리턴
-            if (u == dst)
-                return price_u;
+            if (u == dst) return price_u;
             // 진행 경로(k_visited)가 남은 경로(k) 이내에 있다면 처리 계속
             if (k_visited <= k) {
                 // 처리하면서 진행 경로 +1

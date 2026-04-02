@@ -32,8 +32,7 @@ class P30_1 {
                 return;
             }
             // 다음 노드가 없다면 종료
-            if (node.next == null)
-                break;
+            if (node.next == null) break;
             // 다음 노드로 진행
             node = node.next;
         }
@@ -46,8 +45,7 @@ class P30_1 {
         // 해싱 결과를 인덱스로 지정
         int index = key % nodes.length;
         // 인덱스에 노드가 존재하지 않으면 -1
-        if (nodes[index] == null)
-            return -1;
+        if (nodes[index] == null) return -1;
         // 인덱스에 노드가 존재한다면 일치하는 키 탐색
         Node node = nodes[index];
         while (node != null) {
@@ -67,18 +65,15 @@ class P30_1 {
         // 해싱 결과를 인덱스로 지정
         int index = key % nodes.length;
         // 해당 인덱스에 노드가 없다면 종료
-        if (nodes[index] == null)
-            return;
+        if (nodes[index] == null) return;
         // 첫 번째 노드일 때의 삭제 처리
         Node node = nodes[index];
         // 일치하는 키가 있다면
         if (node.key == key) {
             // 다음 노드가 없으면 해당 인덱스는 null 처리
-            if (node.next == null)
-                nodes[index] = null;
+            if (node.next == null) nodes[index] = null;
             // 다음 노드가 있다면 다음 노드를 해당 인덱스로 지정
-            else
-                nodes[index] = node.next;
+            else nodes[index] = node.next;
         }
         // 연결 리스트 노드일 때의 삭제 처리
         Node prev = node;

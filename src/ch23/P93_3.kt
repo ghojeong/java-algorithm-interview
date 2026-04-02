@@ -9,8 +9,9 @@ class P93_3 {
         if (n <= 2) return n
 
         // 미리 계산한 결과가 있다면 해당 값 리턴
-        if (dp[n] != 0)
+        if (dp[n] != 0) {
             return dp[n]
+        }
         dp[n] = climbStairs(n - 1) + climbStairs(n - 2)
         return dp[n]
     }

@@ -5,8 +5,7 @@ import datatype.ListNode;
 public class P18_1 {
     public ListNode oddEvenList(ListNode head) {
         // 예외 처리
-        if (head == null)
-            return null;
+        if (head == null) return null;
         // 홀수 노드
         ListNode odd = head;
         // 짝수 노드

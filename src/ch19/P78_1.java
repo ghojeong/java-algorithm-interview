@@ -37,9 +37,6 @@ public class P78_1 {
         // 이진수 문자열을 정수형으로 변환하여 리턴
         return Integer.parseUnsignedInt(
                 // 결과 리스트를 문자열로 변환
-                result.stream()
-                        .map(String::valueOf)
-                        .collect(Collectors.joining(""))
-                , 2);
+                result.stream().map(String::valueOf).collect(Collectors.joining("")), 2);
     }
 }

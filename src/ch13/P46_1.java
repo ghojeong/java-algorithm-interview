@@ -8,7 +8,7 @@ public class P46_1 {
         final int x;
         final int distance;
 
-        public Position(int y, int x, int distance) {
+        Position(int y, int x, int distance) {
             this.y = y;
             this.x = x;
             this.distance = distance;
@@ -19,11 +19,7 @@ public class P46_1 {
     Queue<Position> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o.distance));
 
     public void findPath(int y, int x, int distance, int[][] maps) {
-        if (y >= 0 &&
-                y < maps.length &&
-                x >= 0 &&
-                x < maps[0].length &&
-                maps[y][x] != 0) {
+        if (y >= 0 && y < maps.length && x >= 0 && x < maps[0].length && maps[y][x] != 0) {
             // 이미 지나온 경로는 더 이상 거치지 않도록 0으로 설정
             maps[y][x] = 0;
             // 현재 위치와 거리+1을 우선순위 큐에 삽입

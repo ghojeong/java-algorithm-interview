@@ -15,7 +15,11 @@ class P59_3 {
         // 왼쪽 자식 노드부터 진행
         node.left = buildTree(preorder.copyOfRange(1, inIndex + 1), inorder.copyOfRange(0, inIndex))
         // 오른쪽 자식 노드 진행
-        node.right = buildTree(preorder.copyOfRange(inIndex + 1, preorder.size), inorder.copyOfRange(inIndex + 1, inorder.size))
+        node.right =
+            buildTree(
+                preorder.copyOfRange(inIndex + 1, preorder.size),
+                inorder.copyOfRange(inIndex + 1, inorder.size),
+            )
         return node
     }
 }

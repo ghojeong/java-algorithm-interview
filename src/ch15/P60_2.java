@@ -10,12 +10,10 @@ public class P60_2 {
         Queue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
         // 입력값을 모두 힙에 삽입한다.
-        for (int n : nums)
-            pq.add(n);
+        for (int n : nums) pq.add(n);
 
         // k - 1만큼 힙에서 추출한다.
-        for (int i = 0; i < k - 1; i++)
-            pq.poll();
+        for (int i = 0; i < k - 1; i++) pq.poll();
 
         // k번째 마지막 값을 정답으로 리턴
         return pq.poll();

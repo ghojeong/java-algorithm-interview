@@ -15,8 +15,7 @@ public class P72_2 {
             // 이진 검색으로 일치하는 인덱스 추출
             int i2 = Arrays.binarySearch(nums2, n1);
             // 인덱스가 0 이상인 값이면 찾은 것이므로 결과 삽입
-            if (i2 >= 0)
-                result.add(n1);
+            if (i2 >= 0) result.add(n1);
         }
         // 자바 8+ 스트림 이용 결과인 HashSet<Integer> → int[] 변환
         return result.stream().mapToInt(Integer::intValue).toArray();

@@ -3,8 +3,7 @@ package ch12;
 public class P35_1 {
     public void dfs(int i, int j, char[][] grid) {
         // 현재 위치가 그리드 밖이거나, 물(0)인 경우 종료
-        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == '0')
-            return;
+        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == '0') return;
         // 한 번만 탐색하기 위해 탐색한 지점은 물(0)로 변경
         grid[i][j] = '0';
         // 동서남북 재귀 DFS

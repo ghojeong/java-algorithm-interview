@@ -11,8 +11,10 @@ class P74_2 {
             when {
                 // 정답을 찾은 경우 true 리턴
                 matrix[row][col] == target -> return true
+
                 // 타깃보다 크면 왼쪽으로 이동
                 matrix[row][col] > target -> col--
+
                 // 타깃보다 작은 경우이므로 아래로 이동
                 else -> row++
             }

@@ -8,7 +8,7 @@ public class P7_1 {
             for (int j = i + 1; j < nums.length; j++) {
                 // 두 값의 합을 비교해 target과 일치하는 경우 정답으로 리턴
                 if (nums[i] + nums[j] == target) {
-                    return new int[]{i, j};
+                    return new int[] {i, j};
                 }
             }
         }

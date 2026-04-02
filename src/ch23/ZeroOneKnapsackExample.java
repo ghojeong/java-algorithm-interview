@@ -10,7 +10,7 @@ public class ZeroOneKnapsackExample {
         // 무게(kg)
         int weight;
 
-        public Cargo(int price, int weight) {
+        Cargo(int price, int weight) {
             this.price = price;
             this.weight = weight;
         }
@@ -29,11 +29,12 @@ public class ZeroOneKnapsackExample {
                     pack[i][c] = 0;
                 } else if (cargos.get(i - 1).weight <= c) {
                     // 현재 짐 무게가 배낭 용량 이내인 경우 최대 가격 계산
-                    pack[i][c] = Math.max(
-                            // 현재 짐 가격 + 이전 짐의 현재 짐 무게를 뺀 용량의 가격
-                            cargos.get(i - 1).price + pack[i - 1][c - cargos.get(i - 1).weight],
-                            pack[i - 1][c]
-                    );
+                    pack[i][c] =
+                            Math.max(
+                                    // 현재 짐 가격 + 이전 짐의 현재 짐 무게를 뺀 용량의 가격
+                                    cargos.get(i - 1).price
+                                            + pack[i - 1][c - cargos.get(i - 1).weight],
+                                    pack[i - 1][c]);
                 } else {
                     // 용량을 넘어선 경우 이전 짐의 가격을 그대로 이관
                     pack[i][c] = pack[i - 1][c];

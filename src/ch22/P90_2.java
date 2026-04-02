@@ -10,8 +10,7 @@ public class P90_2 {
     public List<Integer> diffWaysToCompute(String expression) {
         List<Integer> result = new ArrayList<>();
         // 이미 계산해둔 동일한 표현식이라면 기존 결과 재활용
-        if (memo.containsKey(expression))
-            return memo.get(expression);
+        if (memo.containsKey(expression)) return memo.get(expression);
 
         for (int i = 0; i < expression.length(); i++) {
             char c = expression.charAt(i);
@@ -36,8 +35,7 @@ public class P90_2 {
             }
         }
         // 연산 결과가 없다는 것은 연산자가 포함되어 있지 않다는 뜻이며, 정숫값만 있는 경우이므로 이 값만 담아서 리턴
-        if (result.isEmpty())
-            result.add(Integer.parseInt(expression));
+        if (result.isEmpty()) result.add(Integer.parseInt(expression));
         // 계산 결과는 추후 재활용을 위해 저장
         memo.put(expression, result);
         return result;

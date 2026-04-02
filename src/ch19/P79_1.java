@@ -20,13 +20,13 @@ public class P79_1 {
             // 11110으로 시작하면 나머지가 3바이트여야 한다.
             if (first >> 3 == 0b11110 && check(data, start, 3)) {
                 start += 4;
-            // 1110으로 시작하면 나머지가 2바이트여야 한다.
+                // 1110으로 시작하면 나머지가 2바이트여야 한다.
             } else if (first >> 4 == 0b1110 && check(data, start, 2)) {
                 start += 3;
-            // 110으로 시작하면 나머지가 1바이트여야 한다.
+                // 110으로 시작하면 나머지가 1바이트여야 한다.
             } else if (first >> 5 == 0b110 && check(data, start, 1)) {
                 start += 2;
-            // 1바이트 문자
+                // 1바이트 문자
             } else if (first >> 7 == 0) {
                 start++;
             } else {

@@ -3,8 +3,9 @@ package ch21
 class P87_3 {
     fun canCompleteCircuit(gas: IntArray, cost: IntArray): Int {
         // 방문 가능한 입력값인지 필터링
-        if (gas.sum() < cost.sum())
+        if (gas.sum() < cost.sum()) {
             return -1
+        }
 
         var start = 0
         var fuel = 0

@@ -6,7 +6,12 @@ import java.util.List;
 import java.util.Map;
 
 public class P36_1 {
-    public void dfs(List<String> result, Map<Character, List<Character>> dic, String digits, int index, StringBuilder path) {
+    public void dfs(
+            List<String> result,
+            Map<Character, List<Character>> dic,
+            String digits,
+            int index,
+            StringBuilder path) {
         // 끝까지 탐색했으면 결과를 저장하고 리턴
         if (path.length() == digits.length()) {
             result.add(String.valueOf(path));
@@ -24,8 +29,7 @@ public class P36_1 {
         // 결과 저장 리스트 선언
         List<String> result = new ArrayList<>();
         // 예외 처리
-        if (digits.length() == 0)
-            return result;
+        if (digits.length() == 0) return result;
 
         // 번호로 조합 가능한 문자 목록 구성
         Map<Character, List<Character>> dic = new HashMap<>();

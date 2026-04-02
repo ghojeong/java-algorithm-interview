@@ -8,7 +8,7 @@ public class P60_1 {
         // 힙의 엘리먼트를 담아둘 리스트 변수
         public List<Integer> elems;
 
-        public BinaryHeap() {
+        BinaryHeap() {
             // 클래스 생성시 빈 리스트를 선언하고, 첫 번째 값은 널을 삽입하여 사용하지 않음
             elems = new ArrayList<>();
             elems.add(null);
@@ -56,11 +56,9 @@ public class P60_1 {
             int largest = i;
 
             // 왼쪽 자식 노드가 존재하고 현재 노드의 값보다 더 크다면 가장 큰 값은 왼쪽 자식 노드로 선언
-            if (left <= elems.size() - 1 && elems.get(left) > elems.get(largest))
-                largest = left;
+            if (left <= elems.size() - 1 && elems.get(left) > elems.get(largest)) largest = left;
             // 오른쪽 자식 노드가 존재하고 현재 노드의 값보다 더 크다면 가장 큰 값은 오른쪽 자식 노드로 선언
-            if (right <= elems.size() - 1 && elems.get(right) > elems.get(largest))
-                largest = right;
+            if (right <= elems.size() - 1 && elems.get(right) > elems.get(largest)) largest = right;
             // 가장 큰 값이 현재 노드가 아니라면 값 스왑 진행
             if (largest != i) {
                 // 가장 큰 노드와 현재 노드의 값 스왑
@@ -91,12 +89,10 @@ public class P60_1 {
         BinaryHeap heap = new BinaryHeap();
 
         // 입력값을 모두 힙에 삽입한다.
-        for (int n : nums)
-            heap.insert(n);
+        for (int n : nums) heap.insert(n);
 
         // k - 1만큼 힙에서 추출한다.
-        for (int i = 0; i < k - 1; i++)
-            heap.extract();
+        for (int i = 0; i < k - 1; i++) heap.extract();
 
         // k번째 마지막 값을 정답으로 리턴
         return heap.extract();

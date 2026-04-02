@@ -3,7 +3,8 @@ package ch12;
 import java.util.*;
 
 public class P41_1 {
-    public void dfs(List<String> results, Map<String, PriorityQueue<String>> fromToMap, String from) {
+    public void dfs(
+            List<String> results, Map<String, PriorityQueue<String>> fromToMap, String from) {
         // from → to 값이 존재하는 경우 반복해서 재귀 DFS
         while (fromToMap.containsKey(from) && !fromToMap.get(from).isEmpty()) {
             // 사전 어휘순 첫 위치부터 우선순위 큐를 이용해 추출 및 재귀 DFS 진행

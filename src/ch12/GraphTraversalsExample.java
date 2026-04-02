@@ -1,6 +1,5 @@
 package ch12;
 
-
 import java.util.*;
 
 public class GraphTraversalsExample {

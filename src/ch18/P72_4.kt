@@ -13,8 +13,9 @@ class P72_4 {
             // 이진 검색으로 일치하는 인덱스 추출
             val i2 = Arrays.binarySearch(nums2, n1)
             // 인덱스가 0 이상인 값이면 찾은 것이므로 결과 삽입
-            if (i2 >= 0)
+            if (i2 >= 0) {
                 result.add(n1)
+            }
         }
         // IntArray로 변환해서 리턴
         return result.toIntArray()

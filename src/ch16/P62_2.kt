@@ -40,8 +40,9 @@ class P62_2 {
             // 단어의 문자를 차례대로 반복하며 자식 노드 구성
             for (c in word) {
                 // 자식 노드가 존재하지 않으면 false 리턴
-                if (cur.children[c - 'a'] == null)
+                if (cur.children[c - 'a'] == null) {
                     return false
+                }
                 // 자식 노드를 현재 노드로 교체
                 cur = cur.children[c - 'a']!!
             }
@@ -57,8 +58,9 @@ class P62_2 {
             // 단어의 문자를 차례대로 반복하며 자식 노드 구성
             for (c in prefix) {
                 // 자식 노드가 존재하지 않으면 false 리턴
-                if (cur.children[c - 'a'] == null)
+                if (cur.children[c - 'a'] == null) {
                     return false
+                }
                 // 자식 노드를 현재 노드로 교체
                 cur = cur.children[c - 'a']!!
             }

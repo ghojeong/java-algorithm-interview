@@ -2,7 +2,6 @@ package ch07;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Stack;
 
 public class P8_2 {
     public int trap(int[] height) {
@@ -15,8 +14,7 @@ public class P8_2 {
                 // 스택에서 꺼낸다.
                 Integer top = stack.pop();
 
-                if (stack.isEmpty())
-                    break;
+                if (stack.isEmpty()) break;
 
                 // 스택의 마지막 위치까지를 거리로 계산
                 int distance = i - stack.peek() - 1;

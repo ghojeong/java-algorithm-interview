@@ -8,7 +8,7 @@ public class BinaryHeapExample {
         // 힙의 엘리먼트를 담아둘 리스트 변수
         public List<Integer> elems;
 
-        public BinaryHeap() {
+        BinaryHeap() {
             // 클래스 생성시 빈 리스트를 선언하고, 첫 번째 값은 널을 삽입하여 사용하지 않음
             elems = new ArrayList<>();
             elems.add(null);
@@ -56,8 +56,7 @@ public class BinaryHeapExample {
             int smallest = i;
 
             // 왼쪽 자식 노드가 존재하고 현재 노드의 값보다 더 작다면 가장 작은 값은 왼쪽 자식 노드로 선언
-            if (left <= elems.size() - 1 && elems.get(left) < elems.get(smallest))
-                smallest = left;
+            if (left <= elems.size() - 1 && elems.get(left) < elems.get(smallest)) smallest = left;
             // 오른쪽 자식 노드가 존재하고 현재 노드의 값보다 더 작다면 가장 작은 값은 오른쪽 자식 노드로 선언
             if (right <= elems.size() - 1 && elems.get(right) < elems.get(smallest))
                 smallest = right;

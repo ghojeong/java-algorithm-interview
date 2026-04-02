@@ -92,8 +92,6 @@
         <module name="EqualsHashCode"/>
         <!-- switch fall-through (의도적이면 // falls through 주석 추가) -->
         <module name="FallThrough"/>
-        <!-- 변수 여러 개 한 줄 선언 금지: int a, b; -->
-        <module name="MultipleVariableDeclarations"/>
         <!-- 문자열 == 비교 금지 (equals 사용) -->
         <module name="StringLiteralEquality"/>
         <!-- true == expr 형식의 불필요한 비교 -->

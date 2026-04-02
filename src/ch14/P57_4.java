@@ -1,7 +1,6 @@
 package ch14;
 
 import datatype.TreeNode;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -19,14 +18,11 @@ public class P57_4 {
             TreeNode node = queue.poll();
 
             // 노드 값이 low보다 크면 더 작아도 되므로 왼쪽 자식 노드 큐에 삽입
-            if (node.val > low)
-                if (node.left != null) queue.add(node.left);
+            if (node.val > low) if (node.left != null) queue.add(node.left);
             // 노드 값이 high보다 작으면 더 커도 되므로 오른쪽 자식 노드 큐에 삽입
-            if (node.val < high)
-                if (node.right != null) queue.add(node.right);
+            if (node.val < high) if (node.right != null) queue.add(node.right);
             // 노드 값이 low보다 크고 high보다 작으면 결과에 추가
-            if (low <= node.val && node.val <= high)
-                result += node.val;
+            if (low <= node.val && node.val <= high) result += node.val;
         }
         return result;
     }

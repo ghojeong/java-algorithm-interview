@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class P87_2 {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         // 방문 가능한 입력값인지 필터링
-        if (Arrays.stream(gas).sum() < Arrays.stream(cost).sum())
-            return -1;
+        if (Arrays.stream(gas).sum() < Arrays.stream(cost).sum()) return -1;
 
         int start = 0, fuel = 0;
         // 전체 주유소를 순회하면서 성립되지 않는 위치를 찾는다.

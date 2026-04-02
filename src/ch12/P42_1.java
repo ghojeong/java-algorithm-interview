@@ -20,7 +20,8 @@ public class P42_1 {
         stack.push("JFK");
         while (!stack.isEmpty()) {
             // 스택에서 추출될 값을 출발지로 한 도착지 처리
-            while (fromToMap.containsKey(stack.getFirst()) && !fromToMap.get(stack.getFirst()).isEmpty()) {
+            while (fromToMap.containsKey(stack.getFirst())
+                    && !fromToMap.get(stack.getFirst()).isEmpty()) {
                 // 여러 도착지 중 사전 어휘 순으로 추출해 스택에 삽입
                 stack.push(fromToMap.get(stack.getFirst()).poll());
             }

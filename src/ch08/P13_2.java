@@ -1,7 +1,6 @@
 package ch08;
 
 import datatype.ListNode;
-
 import java.util.Deque;
 import java.util.LinkedList;
 

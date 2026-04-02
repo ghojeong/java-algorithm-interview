@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class P38_1 {
-    public void dfs(List<List<Integer>> results, LinkedList<Integer> elements, int n, int start, int k) {
+    public void dfs(
+            List<List<Integer>> results, LinkedList<Integer> elements, int n, int start, int k) {
         // k번째 노드에 도달하면 결과에 추가
         if (k == 0) {
             // 자바 8+의 스트림을 이용해 elements의 내용을 결과에 삽입

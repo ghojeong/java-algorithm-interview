@@ -6,8 +6,9 @@ class P90_3 {
     fun diffWaysToCompute(expression: String): List<Int> {
         val result: MutableList<Int> = mutableListOf()
         // 이미 계산해둔 동일한 표현식이라면 기존 결과 재활용
-        if (memo.containsKey(expression))
+        if (memo.containsKey(expression)) {
             return memo[expression]!!
+        }
 
         for (i in expression.indices) {
             val c = expression[i]
@@ -30,8 +31,9 @@ class P90_3 {
             }
         }
         // 연산 결과가 없다는 것은 연산자가 포함되어 있지 않다는 뜻이며, 정숫값만 있는 경우이므로 이 값만 담아서 리턴
-        if (result.isEmpty())
+        if (result.isEmpty()) {
             result.add(expression.toInt())
+        }
         // 계산 결과는 추후 재활용을 위해 저장
         memo[expression] = result
         return result

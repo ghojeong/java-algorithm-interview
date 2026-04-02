@@ -9,8 +9,10 @@ class P1_3 {
             when {
                 // 영숫자인지 판별하고 유효하지 않으면 뒤로 한 칸 이동
                 !Character.isLetterOrDigit(s[start]) -> start++
+
                 // 영숫자인지 판별하고 유효하지 않으면 앞으로 한 칸 이동
                 !Character.isLetterOrDigit(s[end]) -> end--
+
                 else -> {
                     // 이 외에는 유효한 문자이므로 앞뒤 글자를 모두 소문자로 변경하여 비교
                     if (Character.toLowerCase(s[start]) != Character.toLowerCase(s[end])) {

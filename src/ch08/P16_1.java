@@ -1,7 +1,6 @@
 package ch08;
 
 import datatype.ListNode;
-
 import java.math.BigInteger;
 
 public class P16_1 {

@@ -11,8 +11,7 @@ public class P72_1 {
         for (int n1 : nums1) {
             for (int n2 : nums2) {
                 // 값이 같으면 결과 삽입
-                if (n1 == n2)
-                    result.add(n1);
+                if (n1 == n2) result.add(n1);
             }
         }
         // 자바 8+ 스트림 이용 결과인 HashSet<Integer> → int[] 변환

@@ -11,10 +11,8 @@ public class P99_1 {
     public int calcScore(int[] lion) {
         int diff = 0;
         for (int i = 0; i <= 10; i++) {
-            if (lion[i] == 0 && info[i] == 0)
-                continue;
-            diff = (lion[i] > info[i]) ?
-                    diff + (10 - i) : diff - (10 - i);
+            if (lion[i] == 0 && info[i] == 0) continue;
+            diff = (lion[i] > info[i]) ? diff + (10 - i) : diff - (10 - i);
         }
         return diff;
     }
@@ -31,11 +29,9 @@ public class P99_1 {
                 answer = Arrays.copyOf(lion, lion.length);
             } else if (score == maxScore) { // 점수 차이가 같은 경우
                 for (int i = 10; i >= 0; i--) {
-                    if (lion[i] == answer[i])
-                        continue;
+                    if (lion[i] == answer[i]) continue;
                     // 뒤에서부터 더 많이 맞힌 경우 정답 교체
-                    if (lion[i] > answer[i])
-                        answer = Arrays.copyOf(lion, lion.length);
+                    if (lion[i] > answer[i]) answer = Arrays.copyOf(lion, lion.length);
                     break;
                 }
             }
@@ -56,8 +52,7 @@ public class P99_1 {
         dfs(0, new int[11], n);
 
         // 정답이 없으면 -1 리턴
-        if (maxScore == 0)
-            return new int[]{-1};
+        if (maxScore == 0) return new int[] {-1};
         return answer;
     }
 }

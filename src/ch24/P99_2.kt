@@ -9,12 +9,14 @@ class P99_2 {
     fun calcScore(lion: IntArray): Int {
         var diff = 0
         for (i in 0..10) {
-            if (lion[i] == 0 && info[i] == 0)
+            if (lion[i] == 0 && info[i] == 0) {
                 continue
-            diff = if (lion[i] > info[i])
+            }
+            diff = if (lion[i] > info[i]) {
                 diff + (10 - i)
-            else
+            } else {
                 diff - (10 - i)
+            }
         }
         return diff
     }
@@ -31,11 +33,13 @@ class P99_2 {
                 answer = lion.copyOf(lion.size)
             } else if (score == maxScore) { // 점수 차이가 같은 경우
                 for (i in 10 downTo 0) {
-                    if (lion[i] == answer[i])
+                    if (lion[i] == answer[i]) {
                         continue
+                    }
                     // 뒤에서부터 더 많이 맞힌 경우 정답 교체
-                    if (lion[i] > answer[i])
+                    if (lion[i] > answer[i]) {
                         answer = lion.copyOf(lion.size)
+                    }
                     break
                 }
             }
@@ -56,9 +60,10 @@ class P99_2 {
         dfs(0, IntArray(11), n)
 
         // 정답이 없으면 -1 리턴
-        return if (maxScore == 0)
+        return if (maxScore == 0) {
             intArrayOf(-1)
-        else
+        } else {
             answer
+        }
     }
 }

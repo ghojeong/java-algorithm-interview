@@ -31,8 +31,7 @@ public class P45_2 {
             int k_visited = cur.get(2);
 
             // 만약 큐에서 추출한 값이 도착지 dst라면 정답으로 리턴
-            if (u == dst)
-                return price_u;
+            if (u == dst) return price_u;
 
             // 도착지(u)까지 진행 경로(k_visited) 저장, 따로 저장해두진 않지만 비용(price_u)이 가장 저렴한 경로다.
             visited.put(u, k_visited);
@@ -48,7 +47,8 @@ public class P45_2 {
                         // 이미 계산한 경로는 큐에 삽입하지 않는 형태로 풀이를 최적화한다.
                         // 그러나 아직 계산한 경로가 아니거나, 진행 경로(k_visited)가 기존보다 작다면 도착지(dst)까지는
                         // 또 다른 최소 비용을 계산할 가능성이 있으므로 큐에 삽입하여 한 번 더 계산 진행
-                        if (!visited.containsKey(v.getKey()) || k_visited < visited.get(v.getKey())) {
+                        if (!visited.containsKey(v.getKey())
+                                || k_visited < visited.get(v.getKey())) {
                             // u 지점까지 비용(price_u) + u 지점을 출발지로 한 도착지까지 비용
                             int alt = price_u + v.getValue();
                             // 우선순위 큐에 (도착지, 비용, 진행 경로) 삽입

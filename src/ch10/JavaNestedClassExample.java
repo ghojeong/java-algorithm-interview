@@ -7,7 +7,7 @@ public class JavaNestedClassExample {
     class InnerClass {
         int innerVal;
 
-        public InnerClass() {
+        InnerClass() {
             outerVal = 1; // 정상
             innerVal = 2; // 정상
         }
@@ -17,9 +17,9 @@ public class JavaNestedClassExample {
     static class StaticNestedClass {
         int nestedVal;
 
-        public StaticNestedClass() {
+        StaticNestedClass() {
             // outerVal = 3;    // 에러
-            nestedVal = 4;      // 정상
+            nestedVal = 4; // 정상
         }
     }
 }

@@ -1,13 +1,12 @@
 package ch09;
 
-
 public class StackExample {
     static class MyNode {
         int item;
         // 노드의 다음 노드
         MyNode next;
 
-        public MyNode(int item, MyNode next) {
+        MyNode(int item, MyNode next) {
             this.item = item;
             this.next = next;
         }
@@ -17,7 +16,7 @@ public class StackExample {
         MyNode last;
 
         // 스택 최초 생성시 마지막 노드는 없음
-        public MyStack() {
+        MyStack() {
             this.last = null;
         }
 

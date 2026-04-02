@@ -1,15 +1,13 @@
 package ch14;
 
 import datatype.TreeNode;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class P47_1 {
     public int maxDepth(TreeNode root) {
         // 예외 처리
-        if (root == null)
-            return 0;
+        if (root == null) return 0;
         // BFS 진행을 위한 큐 선언, 큐는 인터페이스이며 자료형 선언은 LinkedList 사용
         Queue<TreeNode> queue = new LinkedList<>();
         // 먼저 root부터 큐에 삽입
@@ -28,11 +26,9 @@ public class P47_1 {
                 // 가장 먼저 삽입된 노드(가장 왼쪽)부터 추출된다.
                 TreeNode cur = queue.poll();
                 // 왼쪽 자식 노드가 있다면 큐에 삽입
-                if (cur.left != null)
-                    queue.add(cur.left);
+                if (cur.left != null) queue.add(cur.left);
                 // 오른쪽 자식 노드가 있다면 큐에 삽입
-                if (cur.right != null)
-                    queue.add(cur.right);
+                if (cur.right != null) queue.add(cur.right);
             }
         }
         // BFS 반복 횟수 == 깊이

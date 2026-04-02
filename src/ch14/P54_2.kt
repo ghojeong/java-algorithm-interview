@@ -19,9 +19,10 @@ class P54_2 {
 
         // 첫 번째 리프 노드 추가
         var leaves: MutableList<Int> = mutableListOf()
-        for (i in 0 until n)
+        for (i in 0 until n) {
             // 연결이 하나인 노드를 리프 노드로 추가
             if (graph[i]!!.size == 1) leaves.add(i)
+        }
 
         // 남은 리프 노드 개수, 초깃값은 전체 노드 수
         var left = n

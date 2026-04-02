@@ -5,8 +5,9 @@ import datatype.ListNode
 class P18_2 {
     fun oddEvenList(head: ListNode?): ListNode? {
         // 예외 처리
-        if (head == null)
+        if (head == null) {
             return null
+        }
         // 홀수 노드
         var odd: ListNode = head
         // 짝수 노드

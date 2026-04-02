@@ -14,8 +14,7 @@ public class P5_1 {
             String key = String.valueOf(chars);
 
             // 만약 기존에 없던 키라면 빈 리스트를 삽입
-            if (!results.containsKey(key))
-                results.put(key, new ArrayList<>());
+            if (!results.containsKey(key)) results.put(key, new ArrayList<>());
             // 키에 해당하는 리스트에 추가
             results.get(key).add(s);
         }

@@ -1,15 +1,13 @@
 package ch14;
 
 import datatype.TreeNode;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class P50_5 {
     public TreeNode invertTree(TreeNode root) {
         // 예외 처리
-        if (root == null)
-            return null;
+        if (root == null) return null;
 
         // 반복 BFS 처리를 위한 큐 선언
         Queue<TreeNode> queue = new LinkedList<>();
@@ -26,11 +24,9 @@ public class P50_5 {
             node.right = temp;
 
             // 왼쪽 자식 노드가 널이 아니면 큐 삽입
-            if (node.left != null)
-                queue.offer(node.left);
+            if (node.left != null) queue.offer(node.left);
             // 오른쪽 자식 노드가 널이 아니면 큐 삽입
-            if (node.right != null)
-                queue.offer(node.right);
+            if (node.right != null) queue.offer(node.right);
         }
         return root;
     }

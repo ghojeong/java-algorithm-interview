@@ -18,12 +18,12 @@ public class P61_1 {
             if ("I".equals(op[0])) {
                 minHeap.add(Integer.valueOf(op[1]));
                 maxHeap.add(Integer.valueOf(op[1]));
-            // 추출 연산
+                // 추출 연산
             } else if ("D".equals(op[0])) {
                 // 값이 1인 경우 최댓값 추출
                 if ("1".equals(op[1])) {
                     minHeap.remove(maxHeap.poll());
-                // 값이 -1인 경우 최솟값 추출
+                    // 값이 -1인 경우 최솟값 추출
                 } else if ("-1".equals(op[1])) {
                     maxHeap.remove(minHeap.poll());
                 }
@@ -35,8 +35,6 @@ public class P61_1 {
         Integer minValue = minHeap.poll();
 
         // 값이 없다면 0, 아니라면 해당 값으로 리턴
-        return new int[]{
-                (maxValue == null) ? 0 : maxValue,
-                (minValue == null) ? 0 : minValue};
+        return new int[] {(maxValue == null) ? 0 : maxValue, (minValue == null) ? 0 : minValue};
     }
 }

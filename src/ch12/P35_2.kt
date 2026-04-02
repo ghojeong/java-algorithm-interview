@@ -6,10 +6,10 @@ class P35_2 {
             // 현재 위치가 그리드 밖이거나, 물(0)인 경우 종료
             when {
                 (i < 0) ||
-                        (i >= grid.size) ||
-                        (j < 0) ||
-                        (j >= grid[0].size) ||
-                        (grid[i][j] == '0') -> return
+                    (i >= grid.size) ||
+                    (j < 0) ||
+                    (j >= grid[0].size) ||
+                    (grid[i][j] == '0') -> return
             }
             // 한 번만 탐색하기 위해 탐색한 지점은 물(0)로 변경
             grid[i][j] = '0'

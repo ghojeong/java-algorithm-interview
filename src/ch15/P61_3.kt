@@ -23,6 +23,7 @@ class P61_3 {
                         when (op[1]) {
                             // 값이 1인 경우 최댓값 추출
                             "1" -> minHeap.remove(maxHeap.poll())
+
                             // 값이 -1인 경우 최솟값 추출
                             "-1" -> maxHeap.remove(minHeap.poll())
                         }
@@ -33,7 +34,7 @@ class P61_3 {
         // 최종결과인 최댓값과 최솟값을 추출하고 값이 없다면 0, 아니라면 해당 값으로 리턴
         return intArrayOf(
             maxHeap.poll() ?: 0,
-            minHeap.poll() ?: 0
+            minHeap.poll() ?: 0,
         )
     }
 }

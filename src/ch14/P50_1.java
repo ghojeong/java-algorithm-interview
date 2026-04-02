@@ -5,8 +5,7 @@ import datatype.TreeNode;
 public class P50_1 {
     public TreeNode invertTree(TreeNode root) {
         // 빈 노드에 도달하면 널 리턴
-        if (root == null)
-            return root;
+        if (root == null) return root;
 
         // 현재 노드 값을 복사한 신규 노드 생성
         TreeNode newNode = new TreeNode(root.val);

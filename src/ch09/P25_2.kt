@@ -17,8 +17,9 @@ class P25_2(k: Int) {
             // 현재 큐의 크기 계산
             this.len++
             true
-        } else
+        } else {
             false
+        }
     }
 
     fun deQueue(): Boolean {
@@ -29,24 +30,27 @@ class P25_2(k: Int) {
             // 현재 큐의 크기 계산
             this.len--
             true
-        } else
+        } else {
             false
+        }
     }
 
     fun Front(): Int {
         // 맨 앞의 값을 가져온다.
-        return if (this.isEmpty())
+        return if (this.isEmpty()) {
             -1
-        else
+        } else {
             q[front]
+        }
     }
 
     fun Rear(): Int {
         // 맨 뒤의 값을 가져온다.
-        return if (this.isEmpty())
+        return if (this.isEmpty()) {
             -1
-        else
+        } else {
             q[this.rear]
+        }
     }
 
     fun isEmpty(): Boolean {

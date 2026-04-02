@@ -9,8 +9,7 @@ public class P82_1 {
             // t의 문자가 sb에 포함되어 있다면 삭제하면서 진행
             if (sb.indexOf(String.valueOf(tElem)) != -1)
                 sb.deleteCharAt(sb.indexOf(String.valueOf(tElem)));
-            else
-                return false;
+            else return false;
         }
         // 중간에 빠진 문자 없이 모든 문자가 삭제됐다면 true 리턴
         return true;
@@ -25,8 +24,7 @@ public class P82_1 {
                 String sSubstr = s.substring(left, left + windowSize);
 
                 // 부분 문자열이 t를 포함하면 정답으로 리턴
-                if (contains(sSubstr, t))
-                    return sSubstr;
+                if (contains(sSubstr, t)) return sSubstr;
             }
         }
         return "";

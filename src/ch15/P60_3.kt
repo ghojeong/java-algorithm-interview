@@ -8,12 +8,14 @@ class P60_3 {
         val pq: Queue<Int> = PriorityQueue(Collections.reverseOrder())
 
         // 입력값을 모두 힙에 삽입한다.
-        for (n in nums)
+        for (n in nums) {
             pq.add(n)
+        }
 
         // k - 1만큼 힙에서 추출한다.
-        for (i in 0 until k - 1)
+        for (i in 0 until k - 1) {
             pq.poll()
+        }
 
         // k번째 마지막 값을 정답으로 리턴
         return pq.poll()

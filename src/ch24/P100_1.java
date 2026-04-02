@@ -49,8 +49,7 @@ public class P100_1 {
                     // 현재 처리 중 노드는 값을 찾아서 삭제, 타입을 지정해야 값을 삭제함
                     candidateNodes.remove((Integer) nextNode);
                     // 방문 가능한 노드 추가
-                    if (graph.get(nextNode) != null)
-                        candidateNodes.addAll(graph.get(nextNode));
+                    if (graph.get(nextNode) != null) candidateNodes.addAll(graph.get(nextNode));
 
                     // 큐 삽입(BFS)
                     queue.offer(new Node(nextNode, nextSheep, nextWolves, candidateNodes));

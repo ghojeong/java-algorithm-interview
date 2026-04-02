@@ -7,12 +7,13 @@ public class LambdaExpressionExample {
     }
 
     public static void main(String[] args) {
-        MathInterface math1 = new MathInterface() {
-            @Override
-            public double getPiValue() {
-                return 3.141592;
-            }
-        };
+        MathInterface math1 =
+                new MathInterface() {
+                    @Override
+                    public double getPiValue() {
+                        return 3.141592;
+                    }
+                };
         System.out.println("Pi: " + math1.getPiValue());
 
         // ---

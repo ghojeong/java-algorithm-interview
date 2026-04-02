@@ -1,7 +1,5 @@
 package ch09;
 
-import java.util.Arrays;
-
 public class P25_1 {
     int[] q;
     int front = 0, rear = -1, len = 0;
@@ -21,8 +19,7 @@ public class P25_1 {
             // 현재 큐의 크기 계산
             this.len++;
             return true;
-        } else
-            return false;
+        } else return false;
     }
 
     public boolean deQueue() {
@@ -33,8 +30,7 @@ public class P25_1 {
             // 현재 큐의 크기 계산
             this.len--;
             return true;
-        } else
-            return false;
+        } else return false;
     }
 
     public int Front() {

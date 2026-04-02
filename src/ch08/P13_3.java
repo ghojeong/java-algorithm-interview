@@ -11,8 +11,7 @@ public class P13_3 {
             slow = slow.next;
         }
         // 홀수 개일 때 느린 러너가 한 칸 더 앞으로 가도록 처리
-        if (fast != null)
-            slow = slow.next;
+        if (fast != null) slow = slow.next;
 
         // 중간에 도달한 느린 러너를 기준으로 하여 역순 연결 리스트를 만든다
         ListNode rev = null;
@@ -27,8 +26,7 @@ public class P13_3 {
         // rev 연결 리스트를 끝까지 이동하며 비교
         while (rev != null) {
             // 역순 연결 리스트 rev와 기존 연결 리스트 head를 차례대로 비교
-            if (rev.val != head.val)
-                return false;
+            if (rev.val != head.val) return false;
             rev = rev.next;
             head = head.next;
         }

@@ -11,7 +11,7 @@ public class P50_2 {
             root.left = root.right;
             root.right = temp;
 
-            invertTree(root.left);  // 왼쪽 자식 노드 DFS
+            invertTree(root.left); // 왼쪽 자식 노드 DFS
             invertTree(root.right); // 오른쪽 자식 노드 DFS
         }
         return root;

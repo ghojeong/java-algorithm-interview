@@ -7,8 +7,9 @@ class P52_2 {
     // 직렬화
     fun serialize(root: TreeNode?): String {
         // 예외 처리
-        if (root == null)
+        if (root == null) {
             return ""
+        }
 
         // 반복 BFS 처리를 위한 큐 선언
         val queue: Queue<TreeNode> = LinkedList()
@@ -46,8 +47,9 @@ class P52_2 {
     // 역직렬화
     fun deserialize(data: String): TreeNode? {
         // 예외 처리
-        if (data == "")
+        if (data == "") {
             return null
+        }
 
         // 콤마(,) 기준으로 자른 문자열 배열 선언
         val nodes = data.split(",")

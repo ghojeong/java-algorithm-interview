@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class P67_1 {
     public boolean toSwap(int n1, int n2) {
         // a + b와 b + a를 비교해 후자가 크면 스왑이 필요하므로 true 리턴
-        return Long.parseLong(String.valueOf(n1) + n2) <
-                Long.parseLong(String.valueOf(n2) + n1);
+        return Long.parseLong(String.valueOf(n1) + n2) < Long.parseLong(String.valueOf(n2) + n1);
     }
 
     public String largestNumber(int[] nums) {

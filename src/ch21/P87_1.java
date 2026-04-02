@@ -20,8 +20,7 @@ public class P87_1 {
                 }
             }
             // 모든 주유소를 다 방문했음에도 true라면 정답이므로 출발 주유소 리턴
-            if (canTravel)
-                return start;
+            if (canTravel) return start;
         }
         return -1;
     }

@@ -17,7 +17,7 @@ public class BubbleSortExample {
     }
 
     public static void main(String[] args) {
-        int[] A = new int[]{38, 27, 43, 3, 9, 82, 10};
+        int[] A = new int[] {38, 27, 43, 3, 9, 82, 10};
         System.out.println(Arrays.toString(Bubblesort(A)));
     }
 }

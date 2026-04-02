@@ -11,8 +11,7 @@ public class P23_1 {
         // 엘리먼트 삽입
         queue.add(x);
         // 맨 앞에 두는 상태로 전체 재정렬
-        for (int i = 1; i < queue.size(); i++)
-            queue.add(queue.remove());
+        for (int i = 1; i < queue.size(); i++) queue.add(queue.remove());
     }
 
     public int pop() {
