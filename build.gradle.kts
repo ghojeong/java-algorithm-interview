@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.spotless)
     checkstyle
+    jacoco
 }
 
 group = "com.algorithminterview"
@@ -51,6 +52,49 @@ dependencies {
 
 tasks.withType<Test>().configureEach {
     useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+// ─── JaCoCo (커버리지 리포트) ─────────────────────────────────────────────────
+//
+//  ./gradlew jacocoTestReport   → build/reports/jacoco/test/html/index.html
+//
+jacoco {
+    toolVersion = libs.versions.jacoco.get()
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.withType<Test>())
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+// ─── check / build 연결 ──────────────────────────────────────────────────────
+//
+//  ./gradlew check  → spotlessApply + checkstyle + test + jacocoTestReport
+//  ./gradlew build  → check (mustRunAfter) + assemble
+//
+//  check 실행 순서:
+//    1. spotlessApply  (Java·Kotlin 자동 포맷)
+//    2. compileJava / compileTestJava
+//    3. checkstyleMain / checkstyleTest
+//    4. test  →  jacocoTestReport (커버리지)
+//
+tasks.named("check") {
+    dependsOn("spotlessApply")
+}
+
+// spotlessApply 가 파일을 수정한 뒤 컴파일·검사가 실행되도록 순서 보장
+tasks.withType<JavaCompile>().configureEach {
+    mustRunAfter("spotlessApply")
+}
+tasks.named("checkstyleMain") { mustRunAfter("spotlessApply") }
+tasks.named("checkstyleTest") { mustRunAfter("spotlessApply") }
+
+tasks.named("build") {
+    mustRunAfter("check")
 }
 
 // ─── Spotless (자동 포맷팅) ───────────────────────────────────────────────────

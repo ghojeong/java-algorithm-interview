@@ -17,7 +17,8 @@ dependencyResolutionManagement {
             version("ktlint", "1.8.0")
             version("checkstyle", "13.4.0")
 
-            // ── 테스트 ────────────────────────────────────────────────────────
+            // ── 테스트 / 커버리지 ─────────────────────────────────────────────
+            version("jacoco", "0.8.14")
             version("junit", "6.0.3")
             library("junit-bom", "org.junit", "junit-bom").versionRef("junit")
             library("junit-jupiter", "org.junit.jupiter", "junit-jupiter").withoutVersion()

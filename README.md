@@ -22,7 +22,7 @@
 ## 빌드 / 코드 품질
 
 Java 25 + Kotlin 2.3 + Gradle 9.4.1 기반의 Gradle 프로젝트입니다.
-**Spotless** 하나로 Java와 Kotlin 포맷팅을 통합하고, **Checkstyle**로 Java 정적 분석을 수행합니다.
+**Spotless** 하나로 Java와 Kotlin 포맷팅을 통합하고, **Checkstyle**로 Java 정적 분석을, **JaCoCo**로 테스트 커버리지를 측정합니다.
 
 ### 도구 구성
 
@@ -31,6 +31,7 @@ Java 25 + Kotlin 2.3 + Gradle 9.4.1 기반의 Gradle 프로젝트입니다.
 | [Spotless](https://github.com/diffplug/spotless) + [google-java-format](https://github.com/google/google-java-format) | 자동 포맷팅 | `src/**/*.java`, `test/**/*.java` |
 | [Spotless](https://github.com/diffplug/spotless) + [ktlint](https://pinterest.github.io/ktlint/) | 자동 포맷팅 | `src/**/*.kt` |
 | [Checkstyle](https://checkstyle.org) | 정적 분석 (네이밍·import·코드 품질) | `src/**/*.java`, `test/**/*.java` |
+| [JaCoCo](https://www.jacoco.org/jacoco/) | 테스트 커버리지 리포트 | 전체 소스 |
 
 > **ktlint 플러그인을 별도로 쓰지 않는 이유**
 > Spotless가 ktlint 엔진을 내장하고 있어 기능이 동일합니다. `./gradlew spotlessApply` 하나로 Java와 Kotlin을 동시에 처리할 수 있어 설정을 단순하게 유지합니다.
@@ -107,15 +108,14 @@ open build/reports/checkstyle/main.html
 |------|------|
 | **File** | 위반이 발생한 소스 파일 경로 |
 | **Line** | 해당 줄 번호 (클릭하면 소스 확인 가능) |
-| **Message** | 위반 내용 (`Each variable declaration must be in its own statement` 등) |
-| **Rule** | Checkstyle 규칙 이름 (`MultipleVariableDeclarations`, `RedundantModifier` 등) |
+| **Message** | 위반 내용 (`Variable 'x' must match pattern` 등) |
+| **Rule** | Checkstyle 규칙 이름 (`RedundantModifier`, `UnusedImports` 등) |
 
 자주 나오는 규칙 설명:
 
 | 규칙 | 의미 | 수정 방법 |
 |------|------|----------|
-| `MultipleVariableDeclarations` | `int a, b;` 한 줄에 여러 변수 선언 | `int a;` `int b;` 로 분리 |
-| `RedundantModifier` | 인터페이스 메서드의 `public abstract` 등 불필요한 제어자 | 해당 제어자 제거 |
+| `RedundantModifier` | 비공개 중첩 클래스 생성자의 불필요한 `public` | 해당 `public` 제거 |
 | `ModifierOrder` | `static public` 등 JLS 권장 순서 위반 | `public static`으로 변경 |
 | `UnusedImports` | 사용하지 않는 `import` | 해당 import 제거 |
 | `StringLiteralEquality` | 문자열을 `==`로 비교 | `.equals()`로 변경 |
@@ -127,22 +127,43 @@ open build/reports/checkstyle/main.html
 부득이하게 규칙을 무시해야 할 경우, 어노테이션으로 억제할 수 있습니다.
 
 ```java
-// 특정 규칙 억제
-@SuppressWarnings("checkstyle:MultipleVariableDeclarations")
-int a, b;
+// 단일 규칙 억제
+@SuppressWarnings("checkstyle:RedundantModifier")
+public MyConstructor() { ... }
 
 // 여러 규칙 동시 억제
-@SuppressWarnings({"checkstyle:RedundantModifier", "checkstyle:ModifierOrder"})
+@SuppressWarnings({"checkstyle:ModifierOrder", "checkstyle:UnusedImports"})
 ```
 
 ---
 
-### 전체 검사 (Spotless + Checkstyle + 테스트)
+### 전체 검사 (Spotless + Checkstyle + 테스트 + 커버리지)
 
 ```bash
-# spotlessCheck + checkstyleMain + checkstyleTest + test 한 번에 실행
 ./gradlew check
 ```
+
+`check` 한 번으로 아래 단계가 순서대로 실행됩니다.
+
+```
+spotlessApply → compile → checkstyle → test → jacocoTestReport
+```
+
+| 단계 | 내용 |
+|------|------|
+| `spotlessApply` | Java·Kotlin 파일 자동 포맷 (파일 직접 수정) |
+| `compile` | `src/` + `test/` 컴파일 |
+| `checkstyleMain / checkstyleTest` | 정적 분석 |
+| `test` | JUnit 5 테스트 실행 |
+| `jacocoTestReport` | 커버리지 리포트 생성 |
+
+### 빌드
+
+```bash
+./gradlew build
+```
+
+`check` 완료 후 JAR 패키징(`assemble`)을 수행합니다.
 
 ### 테스트 실행
 
@@ -150,7 +171,42 @@ int a, b;
 ./gradlew test
 ```
 
-테스트 리포트: `build/reports/tests/test/index.html`
+소스나 테스트 파일이 변경되지 않으면 Gradle이 `UP-TO-DATE`로 건너뜁니다.
+강제로 재실행하려면 아래 명령을 사용합니다.
+
+```bash
+# test 태스크만 강제 재실행 (Gradle 7.6+)
+./gradlew test --rerun
+
+# 또는 테스트 결과물을 삭제하고 재실행
+./gradlew cleanTest test
+```
+
+테스트가 끝나면 JaCoCo 커버리지 리포트도 자동으로 생성됩니다.
+
+#### 테스트 리포트
+
+```
+build/reports/tests/test/index.html        # JUnit 결과 (통과·실패·시간)
+build/reports/jacoco/test/html/index.html  # JaCoCo 커버리지 (라인·브랜치)
+build/reports/jacoco/test/jacocoTestReport.xml  # XML (CI 연동용)
+```
+
+```bash
+# macOS에서 바로 열기
+open build/reports/tests/test/index.html
+open build/reports/jacoco/test/html/index.html
+```
+
+JaCoCo 리포트 항목:
+
+| 항목 | 설명 |
+|------|------|
+| **Element** | 패키지 → 클래스 → 메서드 단위로 드릴다운 가능 |
+| **Missed Instructions** | 실행되지 않은 바이트코드 명령 수 |
+| **Cov.** | 커버리지 비율 (녹색 = 커버됨, 빨간색 = 미커버) |
+| **Missed Branches** | 실행되지 않은 분기 수 (if/switch) |
+| **Missed/Total Lines** | 미실행 줄 수 / 전체 실행 가능 줄 수 |
 
 ---
 
