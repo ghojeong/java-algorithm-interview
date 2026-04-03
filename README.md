@@ -65,7 +65,7 @@ Java 25 + Kotlin 2.3 + Gradle 9.4.1 기반의 Gradle 프로젝트입니다.
 
 | 규칙 | 비활성화 이유 |
 |------|--------------|
-| `class-naming` | 파일명이 문제 번호 기반 (`P1_3`, `P96_2`) |
+| `class-naming` | 파일명이 문제 번호 기반 (`P001_3`, `P096_2`) |
 | `function-naming` | 문제 인터페이스 메서드명 그대로 사용 (`Front()`, `Push()`) |
 | `property-naming` | 알고리즘 관례 변수 허용 (`N`, `M`, `INF`) |
 | `no-wildcard-imports` | 알고리즘 코드에서 `java.util.*` 관행적 사용 |
@@ -213,105 +213,105 @@ JaCoCo 리포트 항목:
 ## 문제 풀이
 | 번호 | 제목 | 난이도 | 장 | 풀이 코드 |
 | --- | --- | ---- | - | --- |
-| 1 | [유효한 팰린드롬](https://leetcode.com/problems/valid-palindrome/) | ★ | 6장. 문자열 조작 | [P01_1.java](src/ch06/P01_1.java)<br>[P01_2.java](src/ch06/P01_2.java)<br>[P01_3.kt](src/ch06/P01_3.kt) |
-| 2 | [문자열 뒤집기](https://leetcode.com/problems/reverse-string/) | ★ | 6장. 문자열 조작 | [P02_1.java](src/ch06/P02_1.java)<br>[P02_2.kt](src/ch06/P02_2.kt) |
-| 3 | [로그 파일 재정렬](https://leetcode.com/problems/reorder-data-in-log-files/) | ★ | 6장. 문자열 조작 | [P03_1.java](src/ch06/P03_1.java)<br>[P03_2.kt](src/ch06/P03_2.kt) |
-| 4 | [가장 흔한 단어](https://leetcode.com/problems/most-common-word/) | ★ | 6장. 문자열 조작 | [P04_1.java](src/ch06/P04_1.java)<br>[P04_2.kt](src/ch06/P04_2.kt) |
-| 5 | [그룹 애너그램](https://leetcode.com/problems/group-anagrams/) | ★★ | 6장. 문자열 조작 | [P05_1.java](src/ch06/P05_1.java)<br>[P05_2.kt](src/ch06/P05_2.kt) |
-| 6 | [가장 긴 팰린드롬 부분 문자열](https://leetcode.com/problems/longest-palindromic-substring/) | ★★ | 6장. 문자열 조작 | [P06_1.java](src/ch06/P06_1.java)<br>[P06_2.kt](src/ch06/P06_2.kt) |
-| 7 | [두 수의 합](https://leetcode.com/problems/two-sum/) | ★ | 7장. 배열 | [P07_1.java](src/ch07/P07_1.java)<br>[P07_2.java](src/ch07/P07_2.java)<br>[P07_3.java](src/ch07/P07_3.java)<br>[P07_4.java](src/ch07/P07_4.java)<br>[P07_5.kt](src/ch07/P07_5.kt) |
-| 8 | [빗물 트래핑](https://leetcode.com/problems/trapping-rain-water/) | ★★★ | 7장. 배열 | [P08_1.java](src/ch07/P08_1.java)<br>[P08_2.java](src/ch07/P08_2.java)<br>[P08_3.kt](src/ch07/P08_3.kt) |
-| 9 | [세 수의 합](https://leetcode.com/problems/3sum/) | ★★ | 7장. 배열 | [P09_1.java](src/ch07/P09_1.java)<br>[P09_2.java](src/ch07/P09_2.java)<br>[P09_3.kt](src/ch07/P09_3.kt) |
-| 10 | [배열 파티션 I](https://leetcode.com/problems/array-partition/) | ★ | 7장. 배열 | [P10_1.java](src/ch07/P10_1.java)<br>[P10_2.java](src/ch07/P10_2.java)<br>[P10_3.kt](src/ch07/P10_3.kt) |
-| 11 | [자신을 제외한 배열의 곱](https://leetcode.com/problems/product-of-array-except-self/) | ★★ | 7장. 배열 | [P11_1.java](src/ch07/P11_1.java)<br>[P11_2.kt](src/ch07/P11_2.kt) |
-| 12 | [주식을 사고팔기 가장 좋은 시점](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | ★ | 7장. 배열 | [P12_1.java](src/ch07/P12_1.java)<br>[P12_2.java](src/ch07/P12_2.java)<br>[P12_3.kt](src/ch07/P12_3.kt) |
-| 13 | [팰린드롬 연결 리스트](https://leetcode.com/problems/palindrome-linked-list/) | ★ | 8장. 연결 리스트 | [P13_1.java](src/ch08/P13_1.java)<br>[P13_2.java](src/ch08/P13_2.java)<br>[P13_3.java](src/ch08/P13_3.java)<br>[P13_4.kt](src/ch08/P13_4.kt) |
-| 14 | [두 정렬 리스트의 병합](https://leetcode.com/problems/merge-two-sorted-lists/) | ★ | 8장. 연결 리스트 | [P14_1.java](src/ch08/P14_1.java)<br>[P14_2.kt](src/ch08/P14_2.kt) |
-| 15 | [역순 연결 리스트](https://leetcode.com/problems/reverse-linked-list/) | ★ | 8장. 연결 리스트 | [P15_1.java](src/ch08/P15_1.java)<br>[P15_2.java](src/ch08/P15_2.java)<br>[P15_3.kt](src/ch08/P15_3.kt) |
-| 16 | [두 수의 덧셈](https://leetcode.com/problems/add-two-numbers/) | ★★ | 8장. 연결 리스트 | [P16_1.java](src/ch08/P16_1.java)<br>[P16_2.java](src/ch08/P16_2.java)<br>[P16_3.kt](src/ch08/P16_3.kt) |
-| 17 | [페어의 노드 스왑](https://leetcode.com/problems/swap-nodes-in-pairs/) | ★★ | 8장. 연결 리스트 | [P17_1.java](src/ch08/P17_1.java)<br>[P17_2.java](src/ch08/P17_2.java)<br>[P17_3.java](src/ch08/P17_3.java)<br>[P17_4.kt](src/ch08/P17_4.kt) |
-| 18 | [홀짝 연결 리스트](https://leetcode.com/problems/odd-even-linked-list/) | ★★ | 8장. 연결 리스트 | [P18_1.java](src/ch08/P18_1.java)<br>[P18_2.kt](src/ch08/P18_2.kt) |
-| 19 | [역순 연결 리스트 II](https://leetcode.com/problems/reverse-linked-list-ii/) | ★★ | 8장. 연결 리스트 | [P19_1.java](src/ch08/P19_1.java)<br>[P19_2.kt](src/ch08/P19_2.kt) |
-| 20 | [유효한 괄호](https://leetcode.com/problems/valid-parentheses/) | ★ | 9장. 스택, 큐 | [P20_1.java](src/ch09/P20_1.java)<br>[P20_2.kt](src/ch09/P20_2.kt) |
-| 21 | [중복 문자 제거](https://leetcode.com/problems/remove-duplicate-letters/) | ★★★ | 9장. 스택, 큐 | [P21_1.java](src/ch09/P21_1.java)<br>[P21_2.java](src/ch09/P21_2.java)<br>[P21_3.kt](src/ch09/P21_3.kt) |
-| 22 | [일일 온도](https://leetcode.com/problems/daily-temperatures/) | ★★ | 9장. 스택, 큐 | [P22_1.java](src/ch09/P22_1.java)<br>[P22_2.kt](src/ch09/P22_2.kt) |
-| 23 | [큐를 이용한 스택 구현](https://leetcode.com/problems/implement-stack-using-queues/) | ★ | 9장. 스택, 큐 | [P23_1.java](src/ch09/P23_1.java)<br>[P23_2.kt](src/ch09/P23_2.kt) |
-| 24 | [스택을 이용한 큐 구현](https://leetcode.com/problems/implement-queue-using-stacks/) | ★ | 9장. 스택, 큐 | [P24_1.java](src/ch09/P24_1.java)<br>[P24_2.kt](src/ch09/P24_2.kt) |
-| 25 | [원형 큐 디자인](https://leetcode.com/problems/design-circular-queue/) | ★★ | 9장. 스택, 큐 | [P25_1.java](src/ch09/P25_1.java)<br>[P25_2.kt](src/ch09/P25_2.kt) |
-| 26 | [원형 데크 디자인](https://leetcode.com/problems/design-circular-deque/) | ★★ | 10장. 데크, 우선순위 큐 | [P26_1.java](src/ch10/P26_1.java)<br>[P26_2.kt](src/ch10/P26_2.kt) |
-| 27 | [k개 정렬 리스트 병합](https://leetcode.com/problems/merge-k-sorted-lists/) | ★ | 10장. 데크, 우선순위 큐 | [P27_1.java](src/ch10/P27_1.java)<br>[P27_2.kt](src/ch10/P27_2.kt) |
-| 28 | [원점에 가장 가까운 k개의 점](https://leetcode.com/problems/k-closest-points-to-origin/) | ★★ | 10장. 데크, 우선순위 큐 | [P28_1.java](src/ch10/P28_1.java)<br>[P28_2.java](src/ch10/P28_2.java)<br>[P28_3.kt](src/ch10/P28_3.kt) |
-| 29 | [더 맵게](https://school.programmers.co.kr/learn/courses/30/lessons/42626) | ★ | 10장. 데크, 우선순위 큐 | [P29_1.java](src/ch10/P29_1.java) |
-| 30 | [해시맵 디자인](https://leetcode.com/problems/design-hashmap/) | ★ | 11장. 해시 테이블 | [P30_1.java](src/ch11/P30_1.java)<br>[P30_2.kt](src/ch11/P30_2.kt) |
-| 31 | [보석과 돌](https://leetcode.com/problems/jewels-and-stones/) | ★ | 11장. 해시 테이블 | [P31_1.java](src/ch11/P31_1.java)<br>[P31_2.java](src/ch11/P31_2.java)<br>[P31_3.kt](src/ch11/P31_3.kt) |
-| 32 | [중복 문자 없는 가장 긴 부분 문자열](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | ★★ | 11장. 해시 테이블 | [P32_1.java](src/ch11/P32_1.java)<br>[P32_2.kt](src/ch11/P32_2.kt) |
-| 33 | [상위 k 빈도 엘리먼트](https://leetcode.com/problems/top-k-frequent-elements/) | ★★ | 11장. 해시 테이블 | [P33_1.java](src/ch11/P33_1.java)<br>[P33_2.java](src/ch11/P33_2.java)<br>[P33_3.kt](src/ch11/P33_3.kt) |
-| 34 | [완주하지 못한 선수](https://school.programmers.co.kr/learn/courses/30/lessons/42576) | ★ | 11장. 해시 테이블 | [P34_1.java](src/ch11/P34_1.java)<br>[P34_2.kt](src/ch11/P34_2.kt) |
-| 35 | [섬의 개수](https://leetcode.com/problems/number-of-islands/) | ★★ | 12장. 그래프 | [P35_1.java](src/ch12/P35_1.java)<br>[P35_2.kt](src/ch12/P35_2.kt) |
-| 36 | [전화번호 문자 조합](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | ★★ | 12장. 그래프 | [P36_1.java](src/ch12/P36_1.java)<br>[P36_2.kt](src/ch12/P36_2.kt) |
-| 37 | [순열](https://leetcode.com/problems/permutations/) | ★★ | 12장. 그래프 | [P37_1.java](src/ch12/P37_1.java)<br>[P37_2.kt](src/ch12/P37_2.kt) |
-| 38 | [조합](https://leetcode.com/problems/combinations/) | ★★ | 12장. 그래프 | [P38_1.java](src/ch12/P38_1.java)<br>[P38_2.kt](src/ch12/P38_2.kt) |
-| 39 | [조합의 합](https://leetcode.com/problems/combination-sum/) | ★★ | 12장. 그래프 | [P39_1.java](src/ch12/P39_1.java)<br>[P39_2.kt](src/ch12/P39_2.kt) |
-| 40 | [부분집합](https://leetcode.com/problems/subsets/) | ★★ | 12장. 그래프 | [P40_1.java](src/ch12/P40_1.java)<br>[P40_2.kt](src/ch12/P40_2.kt) |
-| 41 | [일정 재구성](https://leetcode.com/problems/reconstruct-itinerary/) | ★★ | 12장. 그래프 | [P41_1.java](src/ch12/P41_1.java)<br>[P41_2.java](src/ch12/P41_2.java)<br>[P41_3.kt](src/ch12/P41_3.kt) |
-| 42 | [여행 경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164) | ★★ | 12장. 그래프 | [P42_1.java](src/ch12/P42_1.java)<br>[P42_2.kt](src/ch12/P42_2.kt) |
-| 43 | [코스 일정](https://leetcode.com/problems/course-schedule/) | ★★ | 12장. 그래프 | [P43_1.java](src/ch12/P43_1.java)<br>[P43_2.java](src/ch12/P43_2.java)<br>[P43_3.kt](src/ch12/P43_3.kt) |
-| 44 | [네트워크 딜레이 타임](https://leetcode.com/problems/network-delay-time/) | ★★ | 13장. 최단 경로 문제 | [P44_1.java](src/ch13/P44_1.java)<br>[P44_2.kt](src/ch13/P44_2.kt) |
-| 45 | [k 경유지 내 가장 저렴한 항공권](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | ★★ | 13장. 최단 경로 문제 | [P45_1.java](src/ch13/P45_1.java)<br>[P45_2.java](src/ch13/P45_2.java)<br>[P45_3.kt](src/ch13/P45_3.kt) |
-| 46 | [게임 맵 최단 거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | ★★ | 13장. 최단 경로 문제 | [P46_1.java](src/ch13/P46_1.java) |
-| 47 | [이진 트리의 최대 깊이](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | ★ | 14장. 트리 | [P47_1.java](src/ch14/P47_1.java)<br>[P47_2.java](src/ch14/P47_2.java)<br>[P47_3.kt](src/ch14/P47_3.kt) |
-| 48 | [이진 트리의 직경](https://leetcode.com/problems/diameter-of-binary-tree/) | ★ | 14장. 트리 | [P48_1.java](src/ch14/P48_1.java)<br>[P48_2.kt](src/ch14/P48_2.kt) |
-| 49 | [가장 긴 동일 값의 경로](https://leetcode.com/problems/longest-univalue-path/) | ★ | 14장. 트리 | [P49_1.java](src/ch14/P49_1.java)<br>[P49_2.kt](src/ch14/P49_2.kt) |
-| 50 | [이진 트리 반전](https://leetcode.com/problems/invert-binary-tree/) | ★ | 14장. 트리 | [P50_1.java](src/ch14/P50_1.java)<br>[P50_2.java](src/ch14/P50_2.java)<br>[P50_3.java](src/ch14/P50_3.java)<br>[P50_4.java](src/ch14/P50_4.java)<br>[P50_5.java](src/ch14/P50_5.java)<br>[P50_6.kt](src/ch14/P50_6.kt) |
-| 51 | [두 이진 트리 병합](https://leetcode.com/problems/merge-two-binary-trees/) | ★ | 14장. 트리 | [P51_1.java](src/ch14/P51_1.java)<br>[P51_2.kt](src/ch14/P51_2.kt) |
-| 52 | [이진 트리 직렬화 & 역직렬화](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | ★★★ | 14장. 트리 | [P52_1.java](src/ch14/P52_1.java)<br>[P52_2.kt](src/ch14/P52_2.kt) |
-| 53 | [균형 이진 트리](https://leetcode.com/problems/balanced-binary-tree/) | ★ | 14장. 트리 | [P53_1.java](src/ch14/P53_1.java)<br>[P53_2.kt](src/ch14/P53_2.kt) |
-| 54 | [최소 높이 트리](https://leetcode.com/problems/minimum-height-trees/) | ★★ | 14장. 트리 | [P54_1.java](src/ch14/P54_1.java)<br>[P54_2.kt](src/ch14/P54_2.kt) |
-| 55 | [정렬된 배열의 이진 탐색 트리 변환](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | ★ | 14장. 트리 | [P55_1.java](src/ch14/P55_1.java)<br>[P55_2.kt](src/ch14/P55_2.kt) |
-| 56 | [이진 탐색 트리(BST)를 더 큰 수 합계 트리로](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | ★★ | 14장. 트리 | [P56_1.java](src/ch14/P56_1.java)<br>[P56_2.kt](src/ch14/P56_2.kt) |
-| 57 | [이진 탐색 트리(BST) 합의 범위](https://leetcode.com/problems/range-sum-of-bst/) | ★ | 14장. 트리 | [P57_1.java](src/ch14/P57_1.java)<br>[P57_2.java](src/ch14/P57_2.java)<br>[P57_3.java](src/ch14/P57_3.java)<br>[P57_4.java](src/ch14/P57_4.java)<br>[P57_5.kt](src/ch14/P57_5.kt) |
-| 58 | [이진 탐색 트리(BST) 노드 간 최솟값](https://leetcode.com/problems/minimum-distance-between-bst-nodes/) | ★ | 14장. 트리 | [P58_1.java](src/ch14/P58_1.java)<br>[P58_2.java](src/ch14/P58_2.java)<br>[P58_3.kt](src/ch14/P58_3.kt) |
-| 59 | [전위, 중위 순회 결과로 이진 트리 구축](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | ★★ | 14장. 트리 | [P59_1.java](src/ch14/P59_1.java)<br>[P59_2.java](src/ch14/P59_2.java)<br>[P59_3.kt](src/ch14/P59_3.kt) |
-| 60 | [배열의 k번째 큰 엘리먼트](https://leetcode.com/problems/kth-largest-element-in-an-array/) | ★★ | 15장. 힙 | [P60_1.java](src/ch15/P60_1.java)<br>[P60_2.java](src/ch15/P60_2.java)<br>[P60_3.kt](src/ch15/P60_3.kt) |
-| 61 | [이중 우선순위 큐](https://school.programmers.co.kr/learn/courses/30/lessons/42628) | ★★★ | 15장. 힙 | [P61_1.java](src/ch15/P61_1.java)<br>[P61_2.java (예정)](src/ch15/P61_2.java)<br>[P61_3.kt](src/ch15/P61_3.kt) |
-| 62 | [트라이 구현](https://leetcode.com/problems/implement-trie-prefix-tree/) | ★★ | 16장. 트라이 | [P62_1.java](src/ch16/P62_1.java)<br>[P62_2.kt](src/ch16/P62_2.kt) |
-| 63 | [팰린드롬 페어](https://leetcode.com/problems/palindrome-pairs/) | ★★★ | 16장. 트라이 | [P63_1.java](src/ch16/P63_1.java)<br>[P63_2.java](src/ch16/P63_2.java)<br>[P63_3.kt](src/ch16/P63_3.kt) |
-| 64 | [리스트 정렬](https://leetcode.com/problems/sort-list/) | ★★ | 17장. 정렬 | [P64_1.java](src/ch17/P64_1.java)<br>[P64_2.java](src/ch17/P64_2.java)<br>[P64_3.kt](src/ch17/P64_3.kt) |
-| 65 | [구간 병합](https://leetcode.com/problems/merge-intervals/) | ★★ | 17장. 정렬 | [P65_1.java](src/ch17/P65_1.java)<br>[P65_2.kt](src/ch17/P65_2.kt) |
-| 66 | [삽입 정렬 리스트](https://leetcode.com/problems/insertion-sort-list/) | ★★ | 17장. 정렬 | [P66_1.java](src/ch17/P66_1.java)<br>[P66_2.java](src/ch17/P66_2.java)<br>[P66_3.kt](src/ch17/P66_3.kt) |
-| 67 | [가장 큰 수](https://leetcode.com/problems/largest-number/) | ★★ | 17장. 정렬 | [P67_1.java](src/ch17/P67_1.java)<br>[P67_2.kt](src/ch17/P67_2.kt) |
-| 68 | [유효한 애너그램](https://leetcode.com/problems/valid-anagram/) | ★ | 17장. 정렬 | [P68_1.java](src/ch17/P68_1.java)<br>[P68_2.kt](src/ch17/P68_2.kt)<br>[P68_3.kt](src/ch17/P68_3.kt) |
-| 69 | [색 정렬](https://leetcode.com/problems/sort-colors/) | ★★ | 17장. 정렬 | [P69_1.java](src/ch17/P69_1.java)<br>[P69_2.kt](src/ch17/P69_2.kt) |
-| 70 | [이진 검색](https://leetcode.com/problems/binary-search/) | ★ | 18장. 이진 검색 | [P70_1.java](src/ch18/P70_1.java)<br>[P70_2.java](src/ch18/P70_2.java)<br>[P70_3.java](src/ch18/P70_3.java)<br>[P70_4.java](src/ch18/P70_4.java)<br>[P70_5.kt](src/ch18/P70_5.kt) |
-| 71 | [회전 정렬된 배열 검색](https://leetcode.com/problems/search-in-rotated-sorted-array/) | ★★ | 18장. 이진 검색 | [P71_1.java](src/ch18/P71_1.java)<br>[P71_2.kt](src/ch18/P71_2.kt) |
-| 72 | [두 배열의 교집합](https://leetcode.com/problems/intersection-of-two-arrays/) | ★ | 18장. 이진 검색 | [P72_1.java](src/ch18/P72_1.java)<br>[P72_2.java](src/ch18/P72_2.java)<br>[P72_3.java](src/ch18/P72_3.java)<br>[P72_4.kt](src/ch18/P72_4.kt) |
-| 73 | [두 수의 합 II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | ★ | 18장. 이진 검색 | [P73_1.java](src/ch18/P73_1.java)<br>[P73_2.java](src/ch18/P73_2.java)<br>[P73_3.java](src/ch18/P73_3.java)<br>[P73_4.kt](src/ch18/P73_4.kt) |
-| 74 | [2D 행렬 검색 II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | ★★ | 18장. 이진 검색 | [P74_1.java](src/ch18/P74_1.java)<br>[P74_2.kt](src/ch18/P74_2.kt) |
-| 75 | [입국심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238) | ★★★ | 18장. 이진 검색 | [P75_1.java](src/ch18/P75_1.java)<br>[P75_2.kt](src/ch18/P75_2.kt) |
-| 76 | [싱글 넘버](https://leetcode.com/problems/single-number/) | ★ | 19장. 비트 조작 | [P76_1.java](src/ch19/P76_1.java)<br>[P76_2.kt](src/ch19/P76_2.kt) |
-| 77 | [해밍 거리](https://leetcode.com/problems/hamming-distance/) | ★ | 19장. 비트 조작 | [P77_1.java](src/ch19/P77_1.java)<br>[P77_2.kt](src/ch19/P77_2.kt) |
-| 78 | [두 정수의 합](https://leetcode.com/problems/sum-of-two-integers/) | ★★★ | 19장. 비트 조작 | [P78_1.java](src/ch19/P78_1.java)<br>[P78_2.java](src/ch19/P78_2.java)<br>[P78_3.kt](src/ch19/P78_3.kt) |
-| 79 | [UTF-8 검증](https://leetcode.com/problems/utf-8-validation/) | ★★ | 19장. 비트 조작 | [P79_1.java](src/ch19/P79_1.java)<br>[P79_2.kt](src/ch19/P79_2.kt) |
-| 80 | [1비트의 개수](https://leetcode.com/problems/number-of-1-bits/) | ★ | 19장. 비트 조작 | [P80_1.java](src/ch19/P80_1.java)<br>[P80_2.java](src/ch19/P80_2.java)<br>[P80_3.kt](src/ch19/P80_3.kt) |
-| 81 | [최대 슬라이딩 윈도우](https://leetcode.com/problems/sliding-window-maximum/) | ★★★ | 20장. 슬라이딩 윈도우 | [P81_1.java](src/ch20/P81_1.java)<br>[P81_2.java](src/ch20/P81_2.java)<br>[P81_3.java](src/ch20/P81_3.java)<br>[P81_4.kt](src/ch20/P81_4.kt) |
-| 82 | [부분 문자열이 포함된 최소 윈도우](https://leetcode.com/problems/minimum-window-substring/) | ★★★ | 20장. 슬라이딩 윈도우 | [P82_1.java](src/ch20/P82_1.java)<br>[P82_2.java](src/ch20/P82_2.java)<br>[P82_3.kt](src/ch20/P82_3.kt) |
-| 83 | [가장 긴 반복 문자 대체](https://leetcode.com/problems/longest-repeating-character-replacement/) | ★★ | 20장. 슬라이딩 윈도우 | [P83_1.java](src/ch20/P83_1.java)<br>[P83_2.kt](src/ch20/P83_2.kt) |
-| 84 | [주식을 사고팔기 가장 좋은 시점 II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | ★ | 21장. 그리디 알고리즘 | [P84_1.java](src/ch21/P84_1.java)<br>[P84_2.kt](src/ch21/P84_2.kt) |
-| 85 | [키에 따른 대기열 재구성](https://leetcode.com/problems/queue-reconstruction-by-height/) | ★★ | 21장. 그리디 알고리즘 | [P85_1.java](src/ch21/P85_1.java)<br>[P85_2.kt](src/ch21/P85_2.kt) |
-| 86 | [태스크 스케줄러](https://leetcode.com/problems/task-scheduler/) | ★★ | 21장. 그리디 알고리즘 | [P86_1.java](src/ch21/P86_1.java)<br>[P86_2.kt](src/ch21/P86_2.kt) |
-| 87 | [주유소](https://leetcode.com/problems/gas-station/) | ★★ | 21장. 그리디 알고리즘 | [P87_1.java](src/ch21/P87_1.java)<br>[P87_2.java](src/ch21/P87_2.java)<br>[P87_3.kt](src/ch21/P87_3.kt) |
-| 88 | [쿠키 부여](https://leetcode.com/problems/assign-cookies/) | ★ | 21장. 그리디 알고리즘 | [P88_1.java](src/ch21/P88_1.java)<br>[P88_2.kt](src/ch21/P88_2.kt) |
-| 89 | [과반수 엘리먼트](https://leetcode.com/problems/majority-element/) | ★ | 22장. 분할 정복 | [P89_1.java](src/ch22/P89_1.java)<br>[P89_2.java](src/ch22/P89_2.java)<br>[P89_3.java](src/ch22/P89_3.java)<br>[P89_4.kt](src/ch22/P89_4.kt) |
-| 90 | [괄호를 삽입하는 여러가지 방법](https://leetcode.com/problems/different-ways-to-add-parentheses/) | ★★ | 22장. 분할 정복 | [P90_1.java](src/ch22/P90_1.java)<br>[P90_2.java](src/ch22/P90_2.java)<br>[P90_3.kt](src/ch22/P90_3.kt) |
-| 91 | [피보나치 수](https://leetcode.com/problems/fibonacci-number/) | ★ | 23장. 다이나믹 프로그래밍 | [P91_1.java](src/ch23/P91_1.java)<br>[P91_2.java](src/ch23/P91_2.java)<br>[P91_3.java](src/ch23/P91_3.java)<br>[P91_4.java](src/ch23/P91_4.java)<br>[P91_5.kt](src/ch23/P91_5.kt) |
-| 92 | [최대 서브 배열](https://leetcode.com/problems/maximum-subarray/) | ★ | 23장. 다이나믹 프로그래밍 | [P92_1.java](src/ch23/P92_1.java)<br>[P92_2.java](src/ch23/P92_2.java)<br>[P92_3.java](src/ch23/P92_3.java)<br>[P92_4.kt](src/ch23/P92_4.kt) |
-| 93 | [계단 오르기](https://leetcode.com/problems/climbing-stairs/) | ★ | 23장. 다이나믹 프로그래밍 | [P93_1.java](src/ch23/P93_1.java)<br>[P93_2.java](src/ch23/P93_2.java)<br>[P93_3.kt](src/ch23/P93_3.kt) |
-| 94 | [집 도둑](https://leetcode.com/problems/house-robber/) | ★ | 23장. 다이나믹 프로그래밍 | [P94_1.java](src/ch23/P94_1.java)<br>[P94_2.java](src/ch23/P94_2.java)<br>[P94_3.kt](src/ch23/P94_3.kt) |
-| 95 | [도둑질](https://school.programmers.co.kr/learn/courses/30/lessons/42897) | ★★★ | 23장. 다이나믹 프로그래밍 | [P95_1.java](src/ch23/P95_1.java) |
-| 96(문제 1) | [신고 결과 받기](https://school.programmers.co.kr/learn/courses/30/lessons/92334) | ★ | 부록. 2022년 카카오 공채 만점 가이드 | [P96_1.java](src/ch24/P96_1.java)<br>[P96_2.kt](src/ch24/P96_2.kt) |
-| 97(문제 2) | [k진수에서 소수 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/92335) | ★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P97_1.java](src/ch24/P97_1.java)<br>[P97_2.java](src/ch24/P97_2.java)<br>[P97_3.java](src/ch24/P97_3.java)<br>[P97_4.java](src/ch24/P97_4.java)<br>[P97_5.kt](src/ch24/P97_5.kt) |
-| 98(문제 3) | [주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341) | ★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P98_1.java](src/ch24/P98_1.java)<br>[P98_2.kt](src/ch24/P98_2.kt) |
-| 99(문제 4) | [양궁대회](https://school.programmers.co.kr/learn/courses/30/lessons/92342) | ★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P99_1.java](src/ch24/P99_1.java)<br>[P99_2.kt](src/ch24/P99_2.kt) |
+| 1 | [유효한 팰린드롬](https://leetcode.com/problems/valid-palindrome/) | ★ | 6장. 문자열 조작 | [P001_1.java](src/ch06/P001_1.java)<br>[P001_2.java](src/ch06/P001_2.java)<br>[P001_3.kt](src/ch06/P001_3.kt) |
+| 2 | [문자열 뒤집기](https://leetcode.com/problems/reverse-string/) | ★ | 6장. 문자열 조작 | [P002_1.java](src/ch06/P002_1.java)<br>[P002_2.kt](src/ch06/P002_2.kt) |
+| 3 | [로그 파일 재정렬](https://leetcode.com/problems/reorder-data-in-log-files/) | ★ | 6장. 문자열 조작 | [P003_1.java](src/ch06/P003_1.java)<br>[P003_2.kt](src/ch06/P003_2.kt) |
+| 4 | [가장 흔한 단어](https://leetcode.com/problems/most-common-word/) | ★ | 6장. 문자열 조작 | [P004_1.java](src/ch06/P004_1.java)<br>[P004_2.kt](src/ch06/P004_2.kt) |
+| 5 | [그룹 애너그램](https://leetcode.com/problems/group-anagrams/) | ★★ | 6장. 문자열 조작 | [P005_1.java](src/ch06/P005_1.java)<br>[P005_2.kt](src/ch06/P005_2.kt) |
+| 6 | [가장 긴 팰린드롬 부분 문자열](https://leetcode.com/problems/longest-palindromic-substring/) | ★★ | 6장. 문자열 조작 | [P006_1.java](src/ch06/P006_1.java)<br>[P006_2.kt](src/ch06/P006_2.kt) |
+| 7 | [두 수의 합](https://leetcode.com/problems/two-sum/) | ★ | 7장. 배열 | [P007_1.java](src/ch07/P007_1.java)<br>[P007_2.java](src/ch07/P007_2.java)<br>[P007_3.java](src/ch07/P007_3.java)<br>[P007_4.java](src/ch07/P007_4.java)<br>[P007_5.kt](src/ch07/P007_5.kt) |
+| 8 | [빗물 트래핑](https://leetcode.com/problems/trapping-rain-water/) | ★★★ | 7장. 배열 | [P008_1.java](src/ch07/P008_1.java)<br>[P008_2.java](src/ch07/P008_2.java)<br>[P008_3.kt](src/ch07/P008_3.kt) |
+| 9 | [세 수의 합](https://leetcode.com/problems/3sum/) | ★★ | 7장. 배열 | [P009_1.java](src/ch07/P009_1.java)<br>[P009_2.java](src/ch07/P009_2.java)<br>[P009_3.kt](src/ch07/P009_3.kt) |
+| 10 | [배열 파티션 I](https://leetcode.com/problems/array-partition/) | ★ | 7장. 배열 | [P010_1.java](src/ch07/P010_1.java)<br>[P010_2.java](src/ch07/P010_2.java)<br>[P010_3.kt](src/ch07/P010_3.kt) |
+| 11 | [자신을 제외한 배열의 곱](https://leetcode.com/problems/product-of-array-except-self/) | ★★ | 7장. 배열 | [P011_1.java](src/ch07/P011_1.java)<br>[P011_2.kt](src/ch07/P011_2.kt) |
+| 12 | [주식을 사고팔기 가장 좋은 시점](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | ★ | 7장. 배열 | [P012_1.java](src/ch07/P012_1.java)<br>[P012_2.java](src/ch07/P012_2.java)<br>[P012_3.kt](src/ch07/P012_3.kt) |
+| 13 | [팰린드롬 연결 리스트](https://leetcode.com/problems/palindrome-linked-list/) | ★ | 8장. 연결 리스트 | [P013_1.java](src/ch08/P013_1.java)<br>[P013_2.java](src/ch08/P013_2.java)<br>[P013_3.java](src/ch08/P013_3.java)<br>[P013_4.kt](src/ch08/P013_4.kt) |
+| 14 | [두 정렬 리스트의 병합](https://leetcode.com/problems/merge-two-sorted-lists/) | ★ | 8장. 연결 리스트 | [P014_1.java](src/ch08/P014_1.java)<br>[P014_2.kt](src/ch08/P014_2.kt) |
+| 15 | [역순 연결 리스트](https://leetcode.com/problems/reverse-linked-list/) | ★ | 8장. 연결 리스트 | [P015_1.java](src/ch08/P015_1.java)<br>[P015_2.java](src/ch08/P015_2.java)<br>[P015_3.kt](src/ch08/P015_3.kt) |
+| 16 | [두 수의 덧셈](https://leetcode.com/problems/add-two-numbers/) | ★★ | 8장. 연결 리스트 | [P016_1.java](src/ch08/P016_1.java)<br>[P016_2.java](src/ch08/P016_2.java)<br>[P016_3.kt](src/ch08/P016_3.kt) |
+| 17 | [페어의 노드 스왑](https://leetcode.com/problems/swap-nodes-in-pairs/) | ★★ | 8장. 연결 리스트 | [P017_1.java](src/ch08/P017_1.java)<br>[P017_2.java](src/ch08/P017_2.java)<br>[P017_3.java](src/ch08/P017_3.java)<br>[P017_4.kt](src/ch08/P017_4.kt) |
+| 18 | [홀짝 연결 리스트](https://leetcode.com/problems/odd-even-linked-list/) | ★★ | 8장. 연결 리스트 | [P018_1.java](src/ch08/P018_1.java)<br>[P018_2.kt](src/ch08/P018_2.kt) |
+| 19 | [역순 연결 리스트 II](https://leetcode.com/problems/reverse-linked-list-ii/) | ★★ | 8장. 연결 리스트 | [P019_1.java](src/ch08/P019_1.java)<br>[P019_2.kt](src/ch08/P019_2.kt) |
+| 20 | [유효한 괄호](https://leetcode.com/problems/valid-parentheses/) | ★ | 9장. 스택, 큐 | [P020_1.java](src/ch09/P020_1.java)<br>[P020_2.kt](src/ch09/P020_2.kt) |
+| 21 | [중복 문자 제거](https://leetcode.com/problems/remove-duplicate-letters/) | ★★★ | 9장. 스택, 큐 | [P021_1.java](src/ch09/P021_1.java)<br>[P021_2.java](src/ch09/P021_2.java)<br>[P021_3.kt](src/ch09/P021_3.kt) |
+| 22 | [일일 온도](https://leetcode.com/problems/daily-temperatures/) | ★★ | 9장. 스택, 큐 | [P022_1.java](src/ch09/P022_1.java)<br>[P022_2.kt](src/ch09/P022_2.kt) |
+| 23 | [큐를 이용한 스택 구현](https://leetcode.com/problems/implement-stack-using-queues/) | ★ | 9장. 스택, 큐 | [P023_1.java](src/ch09/P023_1.java)<br>[P023_2.kt](src/ch09/P023_2.kt) |
+| 24 | [스택을 이용한 큐 구현](https://leetcode.com/problems/implement-queue-using-stacks/) | ★ | 9장. 스택, 큐 | [P024_1.java](src/ch09/P024_1.java)<br>[P024_2.kt](src/ch09/P024_2.kt) |
+| 25 | [원형 큐 디자인](https://leetcode.com/problems/design-circular-queue/) | ★★ | 9장. 스택, 큐 | [P025_1.java](src/ch09/P025_1.java)<br>[P025_2.kt](src/ch09/P025_2.kt) |
+| 26 | [원형 데크 디자인](https://leetcode.com/problems/design-circular-deque/) | ★★ | 10장. 데크, 우선순위 큐 | [P026_1.java](src/ch10/P026_1.java)<br>[P026_2.kt](src/ch10/P026_2.kt) |
+| 27 | [k개 정렬 리스트 병합](https://leetcode.com/problems/merge-k-sorted-lists/) | ★ | 10장. 데크, 우선순위 큐 | [P027_1.java](src/ch10/P027_1.java)<br>[P027_2.kt](src/ch10/P027_2.kt) |
+| 28 | [원점에 가장 가까운 k개의 점](https://leetcode.com/problems/k-closest-points-to-origin/) | ★★ | 10장. 데크, 우선순위 큐 | [P028_1.java](src/ch10/P028_1.java)<br>[P028_2.java](src/ch10/P028_2.java)<br>[P028_3.kt](src/ch10/P028_3.kt) |
+| 29 | [더 맵게](https://school.programmers.co.kr/learn/courses/30/lessons/42626) | ★ | 10장. 데크, 우선순위 큐 | [P029_1.java](src/ch10/P029_1.java) |
+| 30 | [해시맵 디자인](https://leetcode.com/problems/design-hashmap/) | ★ | 11장. 해시 테이블 | [P030_1.java](src/ch11/P030_1.java)<br>[P030_2.kt](src/ch11/P030_2.kt) |
+| 31 | [보석과 돌](https://leetcode.com/problems/jewels-and-stones/) | ★ | 11장. 해시 테이블 | [P031_1.java](src/ch11/P031_1.java)<br>[P031_2.java](src/ch11/P031_2.java)<br>[P031_3.kt](src/ch11/P031_3.kt) |
+| 32 | [중복 문자 없는 가장 긴 부분 문자열](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | ★★ | 11장. 해시 테이블 | [P032_1.java](src/ch11/P032_1.java)<br>[P032_2.kt](src/ch11/P032_2.kt) |
+| 33 | [상위 k 빈도 엘리먼트](https://leetcode.com/problems/top-k-frequent-elements/) | ★★ | 11장. 해시 테이블 | [P033_1.java](src/ch11/P033_1.java)<br>[P033_2.java](src/ch11/P033_2.java)<br>[P033_3.kt](src/ch11/P033_3.kt) |
+| 34 | [완주하지 못한 선수](https://school.programmers.co.kr/learn/courses/30/lessons/42576) | ★ | 11장. 해시 테이블 | [P034_1.java](src/ch11/P034_1.java)<br>[P034_2.kt](src/ch11/P034_2.kt) |
+| 35 | [섬의 개수](https://leetcode.com/problems/number-of-islands/) | ★★ | 12장. 그래프 | [P035_1.java](src/ch12/P035_1.java)<br>[P035_2.kt](src/ch12/P035_2.kt) |
+| 36 | [전화번호 문자 조합](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | ★★ | 12장. 그래프 | [P036_1.java](src/ch12/P036_1.java)<br>[P036_2.kt](src/ch12/P036_2.kt) |
+| 37 | [순열](https://leetcode.com/problems/permutations/) | ★★ | 12장. 그래프 | [P037_1.java](src/ch12/P037_1.java)<br>[P037_2.kt](src/ch12/P037_2.kt) |
+| 38 | [조합](https://leetcode.com/problems/combinations/) | ★★ | 12장. 그래프 | [P038_1.java](src/ch12/P038_1.java)<br>[P038_2.kt](src/ch12/P038_2.kt) |
+| 39 | [조합의 합](https://leetcode.com/problems/combination-sum/) | ★★ | 12장. 그래프 | [P039_1.java](src/ch12/P039_1.java)<br>[P039_2.kt](src/ch12/P039_2.kt) |
+| 40 | [부분집합](https://leetcode.com/problems/subsets/) | ★★ | 12장. 그래프 | [P040_1.java](src/ch12/P040_1.java)<br>[P040_2.kt](src/ch12/P040_2.kt) |
+| 41 | [일정 재구성](https://leetcode.com/problems/reconstruct-itinerary/) | ★★ | 12장. 그래프 | [P041_1.java](src/ch12/P041_1.java)<br>[P041_2.java](src/ch12/P041_2.java)<br>[P041_3.kt](src/ch12/P041_3.kt) |
+| 42 | [여행 경로](https://school.programmers.co.kr/learn/courses/30/lessons/43164) | ★★ | 12장. 그래프 | [P042_1.java](src/ch12/P042_1.java)<br>[P042_2.kt](src/ch12/P042_2.kt) |
+| 43 | [코스 일정](https://leetcode.com/problems/course-schedule/) | ★★ | 12장. 그래프 | [P043_1.java](src/ch12/P043_1.java)<br>[P043_2.java](src/ch12/P043_2.java)<br>[P043_3.kt](src/ch12/P043_3.kt) |
+| 44 | [네트워크 딜레이 타임](https://leetcode.com/problems/network-delay-time/) | ★★ | 13장. 최단 경로 문제 | [P044_1.java](src/ch13/P044_1.java)<br>[P044_2.kt](src/ch13/P044_2.kt) |
+| 45 | [k 경유지 내 가장 저렴한 항공권](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | ★★ | 13장. 최단 경로 문제 | [P045_1.java](src/ch13/P045_1.java)<br>[P045_2.java](src/ch13/P045_2.java)<br>[P045_3.kt](src/ch13/P045_3.kt) |
+| 46 | [게임 맵 최단 거리](https://school.programmers.co.kr/learn/courses/30/lessons/1844) | ★★ | 13장. 최단 경로 문제 | [P046_1.java](src/ch13/P046_1.java) |
+| 47 | [이진 트리의 최대 깊이](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | ★ | 14장. 트리 | [P047_1.java](src/ch14/P047_1.java)<br>[P047_2.java](src/ch14/P047_2.java)<br>[P047_3.kt](src/ch14/P047_3.kt) |
+| 48 | [이진 트리의 직경](https://leetcode.com/problems/diameter-of-binary-tree/) | ★ | 14장. 트리 | [P048_1.java](src/ch14/P048_1.java)<br>[P048_2.kt](src/ch14/P048_2.kt) |
+| 49 | [가장 긴 동일 값의 경로](https://leetcode.com/problems/longest-univalue-path/) | ★ | 14장. 트리 | [P049_1.java](src/ch14/P049_1.java)<br>[P049_2.kt](src/ch14/P049_2.kt) |
+| 50 | [이진 트리 반전](https://leetcode.com/problems/invert-binary-tree/) | ★ | 14장. 트리 | [P050_1.java](src/ch14/P050_1.java)<br>[P050_2.java](src/ch14/P050_2.java)<br>[P050_3.java](src/ch14/P050_3.java)<br>[P050_4.java](src/ch14/P050_4.java)<br>[P050_5.java](src/ch14/P050_5.java)<br>[P050_6.kt](src/ch14/P050_6.kt) |
+| 51 | [두 이진 트리 병합](https://leetcode.com/problems/merge-two-binary-trees/) | ★ | 14장. 트리 | [P051_1.java](src/ch14/P051_1.java)<br>[P051_2.kt](src/ch14/P051_2.kt) |
+| 52 | [이진 트리 직렬화 & 역직렬화](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | ★★★ | 14장. 트리 | [P052_1.java](src/ch14/P052_1.java)<br>[P052_2.kt](src/ch14/P052_2.kt) |
+| 53 | [균형 이진 트리](https://leetcode.com/problems/balanced-binary-tree/) | ★ | 14장. 트리 | [P053_1.java](src/ch14/P053_1.java)<br>[P053_2.kt](src/ch14/P053_2.kt) |
+| 54 | [최소 높이 트리](https://leetcode.com/problems/minimum-height-trees/) | ★★ | 14장. 트리 | [P054_1.java](src/ch14/P054_1.java)<br>[P054_2.kt](src/ch14/P054_2.kt) |
+| 55 | [정렬된 배열의 이진 탐색 트리 변환](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | ★ | 14장. 트리 | [P055_1.java](src/ch14/P055_1.java)<br>[P055_2.kt](src/ch14/P055_2.kt) |
+| 56 | [이진 탐색 트리(BST)를 더 큰 수 합계 트리로](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/) | ★★ | 14장. 트리 | [P056_1.java](src/ch14/P056_1.java)<br>[P056_2.kt](src/ch14/P056_2.kt) |
+| 57 | [이진 탐색 트리(BST) 합의 범위](https://leetcode.com/problems/range-sum-of-bst/) | ★ | 14장. 트리 | [P057_1.java](src/ch14/P057_1.java)<br>[P057_2.java](src/ch14/P057_2.java)<br>[P057_3.java](src/ch14/P057_3.java)<br>[P057_4.java](src/ch14/P057_4.java)<br>[P057_5.kt](src/ch14/P057_5.kt) |
+| 58 | [이진 탐색 트리(BST) 노드 간 최솟값](https://leetcode.com/problems/minimum-distance-between-bst-nodes/) | ★ | 14장. 트리 | [P058_1.java](src/ch14/P058_1.java)<br>[P058_2.java](src/ch14/P058_2.java)<br>[P058_3.kt](src/ch14/P058_3.kt) |
+| 59 | [전위, 중위 순회 결과로 이진 트리 구축](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | ★★ | 14장. 트리 | [P059_1.java](src/ch14/P059_1.java)<br>[P059_2.java](src/ch14/P059_2.java)<br>[P059_3.kt](src/ch14/P059_3.kt) |
+| 60 | [배열의 k번째 큰 엘리먼트](https://leetcode.com/problems/kth-largest-element-in-an-array/) | ★★ | 15장. 힙 | [P060_1.java](src/ch15/P060_1.java)<br>[P060_2.java](src/ch15/P060_2.java)<br>[P060_3.kt](src/ch15/P060_3.kt) |
+| 61 | [이중 우선순위 큐](https://school.programmers.co.kr/learn/courses/30/lessons/42628) | ★★★ | 15장. 힙 | [P061_1.java](src/ch15/P061_1.java)<br>[P061_2.java (예정)](src/ch15/P061_2.java)<br>[P061_3.kt](src/ch15/P061_3.kt) |
+| 62 | [트라이 구현](https://leetcode.com/problems/implement-trie-prefix-tree/) | ★★ | 16장. 트라이 | [P062_1.java](src/ch16/P062_1.java)<br>[P062_2.kt](src/ch16/P062_2.kt) |
+| 63 | [팰린드롬 페어](https://leetcode.com/problems/palindrome-pairs/) | ★★★ | 16장. 트라이 | [P063_1.java](src/ch16/P063_1.java)<br>[P063_2.java](src/ch16/P063_2.java)<br>[P063_3.kt](src/ch16/P063_3.kt) |
+| 64 | [리스트 정렬](https://leetcode.com/problems/sort-list/) | ★★ | 17장. 정렬 | [P064_1.java](src/ch17/P064_1.java)<br>[P064_2.java](src/ch17/P064_2.java)<br>[P064_3.kt](src/ch17/P064_3.kt) |
+| 65 | [구간 병합](https://leetcode.com/problems/merge-intervals/) | ★★ | 17장. 정렬 | [P065_1.java](src/ch17/P065_1.java)<br>[P065_2.kt](src/ch17/P065_2.kt) |
+| 66 | [삽입 정렬 리스트](https://leetcode.com/problems/insertion-sort-list/) | ★★ | 17장. 정렬 | [P066_1.java](src/ch17/P066_1.java)<br>[P066_2.java](src/ch17/P066_2.java)<br>[P066_3.kt](src/ch17/P066_3.kt) |
+| 67 | [가장 큰 수](https://leetcode.com/problems/largest-number/) | ★★ | 17장. 정렬 | [P067_1.java](src/ch17/P067_1.java)<br>[P067_2.kt](src/ch17/P067_2.kt) |
+| 68 | [유효한 애너그램](https://leetcode.com/problems/valid-anagram/) | ★ | 17장. 정렬 | [P068_1.java](src/ch17/P068_1.java)<br>[P068_2.kt](src/ch17/P068_2.kt)<br>[P068_3.kt](src/ch17/P068_3.kt) |
+| 69 | [색 정렬](https://leetcode.com/problems/sort-colors/) | ★★ | 17장. 정렬 | [P069_1.java](src/ch17/P069_1.java)<br>[P069_2.kt](src/ch17/P069_2.kt) |
+| 70 | [이진 검색](https://leetcode.com/problems/binary-search/) | ★ | 18장. 이진 검색 | [P070_1.java](src/ch18/P070_1.java)<br>[P070_2.java](src/ch18/P070_2.java)<br>[P070_3.java](src/ch18/P070_3.java)<br>[P070_4.java](src/ch18/P070_4.java)<br>[P070_5.kt](src/ch18/P070_5.kt) |
+| 71 | [회전 정렬된 배열 검색](https://leetcode.com/problems/search-in-rotated-sorted-array/) | ★★ | 18장. 이진 검색 | [P071_1.java](src/ch18/P071_1.java)<br>[P071_2.kt](src/ch18/P071_2.kt) |
+| 72 | [두 배열의 교집합](https://leetcode.com/problems/intersection-of-two-arrays/) | ★ | 18장. 이진 검색 | [P072_1.java](src/ch18/P072_1.java)<br>[P072_2.java](src/ch18/P072_2.java)<br>[P072_3.java](src/ch18/P072_3.java)<br>[P072_4.kt](src/ch18/P072_4.kt) |
+| 73 | [두 수의 합 II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | ★ | 18장. 이진 검색 | [P073_1.java](src/ch18/P073_1.java)<br>[P073_2.java](src/ch18/P073_2.java)<br>[P073_3.java](src/ch18/P073_3.java)<br>[P073_4.kt](src/ch18/P073_4.kt) |
+| 74 | [2D 행렬 검색 II](https://leetcode.com/problems/search-a-2d-matrix-ii/) | ★★ | 18장. 이진 검색 | [P074_1.java](src/ch18/P074_1.java)<br>[P074_2.kt](src/ch18/P074_2.kt) |
+| 75 | [입국심사](https://school.programmers.co.kr/learn/courses/30/lessons/43238) | ★★★ | 18장. 이진 검색 | [P075_1.java](src/ch18/P075_1.java)<br>[P075_2.kt](src/ch18/P075_2.kt) |
+| 76 | [싱글 넘버](https://leetcode.com/problems/single-number/) | ★ | 19장. 비트 조작 | [P076_1.java](src/ch19/P076_1.java)<br>[P076_2.kt](src/ch19/P076_2.kt) |
+| 77 | [해밍 거리](https://leetcode.com/problems/hamming-distance/) | ★ | 19장. 비트 조작 | [P077_1.java](src/ch19/P077_1.java)<br>[P077_2.kt](src/ch19/P077_2.kt) |
+| 78 | [두 정수의 합](https://leetcode.com/problems/sum-of-two-integers/) | ★★★ | 19장. 비트 조작 | [P078_1.java](src/ch19/P078_1.java)<br>[P078_2.java](src/ch19/P078_2.java)<br>[P078_3.kt](src/ch19/P078_3.kt) |
+| 79 | [UTF-8 검증](https://leetcode.com/problems/utf-8-validation/) | ★★ | 19장. 비트 조작 | [P079_1.java](src/ch19/P079_1.java)<br>[P079_2.kt](src/ch19/P079_2.kt) |
+| 80 | [1비트의 개수](https://leetcode.com/problems/number-of-1-bits/) | ★ | 19장. 비트 조작 | [P080_1.java](src/ch19/P080_1.java)<br>[P080_2.java](src/ch19/P080_2.java)<br>[P080_3.kt](src/ch19/P080_3.kt) |
+| 81 | [최대 슬라이딩 윈도우](https://leetcode.com/problems/sliding-window-maximum/) | ★★★ | 20장. 슬라이딩 윈도우 | [P081_1.java](src/ch20/P081_1.java)<br>[P081_2.java](src/ch20/P081_2.java)<br>[P081_3.java](src/ch20/P081_3.java)<br>[P081_4.kt](src/ch20/P081_4.kt) |
+| 82 | [부분 문자열이 포함된 최소 윈도우](https://leetcode.com/problems/minimum-window-substring/) | ★★★ | 20장. 슬라이딩 윈도우 | [P082_1.java](src/ch20/P082_1.java)<br>[P082_2.java](src/ch20/P082_2.java)<br>[P082_3.kt](src/ch20/P082_3.kt) |
+| 83 | [가장 긴 반복 문자 대체](https://leetcode.com/problems/longest-repeating-character-replacement/) | ★★ | 20장. 슬라이딩 윈도우 | [P083_1.java](src/ch20/P083_1.java)<br>[P083_2.kt](src/ch20/P083_2.kt) |
+| 84 | [주식을 사고팔기 가장 좋은 시점 II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | ★ | 21장. 그리디 알고리즘 | [P084_1.java](src/ch21/P084_1.java)<br>[P084_2.kt](src/ch21/P084_2.kt) |
+| 85 | [키에 따른 대기열 재구성](https://leetcode.com/problems/queue-reconstruction-by-height/) | ★★ | 21장. 그리디 알고리즘 | [P085_1.java](src/ch21/P085_1.java)<br>[P085_2.kt](src/ch21/P085_2.kt) |
+| 86 | [태스크 스케줄러](https://leetcode.com/problems/task-scheduler/) | ★★ | 21장. 그리디 알고리즘 | [P086_1.java](src/ch21/P086_1.java)<br>[P086_2.kt](src/ch21/P086_2.kt) |
+| 87 | [주유소](https://leetcode.com/problems/gas-station/) | ★★ | 21장. 그리디 알고리즘 | [P087_1.java](src/ch21/P087_1.java)<br>[P087_2.java](src/ch21/P087_2.java)<br>[P087_3.kt](src/ch21/P087_3.kt) |
+| 88 | [쿠키 부여](https://leetcode.com/problems/assign-cookies/) | ★ | 21장. 그리디 알고리즘 | [P088_1.java](src/ch21/P088_1.java)<br>[P088_2.kt](src/ch21/P088_2.kt) |
+| 89 | [과반수 엘리먼트](https://leetcode.com/problems/majority-element/) | ★ | 22장. 분할 정복 | [P089_1.java](src/ch22/P089_1.java)<br>[P089_2.java](src/ch22/P089_2.java)<br>[P089_3.java](src/ch22/P089_3.java)<br>[P089_4.kt](src/ch22/P089_4.kt) |
+| 90 | [괄호를 삽입하는 여러가지 방법](https://leetcode.com/problems/different-ways-to-add-parentheses/) | ★★ | 22장. 분할 정복 | [P090_1.java](src/ch22/P090_1.java)<br>[P090_2.java](src/ch22/P090_2.java)<br>[P090_3.kt](src/ch22/P090_3.kt) |
+| 91 | [피보나치 수](https://leetcode.com/problems/fibonacci-number/) | ★ | 23장. 다이나믹 프로그래밍 | [P091_1.java](src/ch23/P091_1.java)<br>[P091_2.java](src/ch23/P091_2.java)<br>[P091_3.java](src/ch23/P091_3.java)<br>[P091_4.java](src/ch23/P091_4.java)<br>[P091_5.kt](src/ch23/P091_5.kt) |
+| 92 | [최대 서브 배열](https://leetcode.com/problems/maximum-subarray/) | ★ | 23장. 다이나믹 프로그래밍 | [P092_1.java](src/ch23/P092_1.java)<br>[P092_2.java](src/ch23/P092_2.java)<br>[P092_3.java](src/ch23/P092_3.java)<br>[P092_4.kt](src/ch23/P092_4.kt) |
+| 93 | [계단 오르기](https://leetcode.com/problems/climbing-stairs/) | ★ | 23장. 다이나믹 프로그래밍 | [P093_1.java](src/ch23/P093_1.java)<br>[P093_2.java](src/ch23/P093_2.java)<br>[P093_3.kt](src/ch23/P093_3.kt) |
+| 94 | [집 도둑](https://leetcode.com/problems/house-robber/) | ★ | 23장. 다이나믹 프로그래밍 | [P094_1.java](src/ch23/P094_1.java)<br>[P094_2.java](src/ch23/P094_2.java)<br>[P094_3.kt](src/ch23/P094_3.kt) |
+| 95 | [도둑질](https://school.programmers.co.kr/learn/courses/30/lessons/42897) | ★★★ | 23장. 다이나믹 프로그래밍 | [P095_1.java](src/ch23/P095_1.java) |
+| 96(문제 1) | [신고 결과 받기](https://school.programmers.co.kr/learn/courses/30/lessons/92334) | ★ | 부록. 2022년 카카오 공채 만점 가이드 | [P096_1.java](src/ch24/P096_1.java)<br>[P096_2.kt](src/ch24/P096_2.kt) |
+| 97(문제 2) | [k진수에서 소수 개수 구하기](https://school.programmers.co.kr/learn/courses/30/lessons/92335) | ★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P097_1.java](src/ch24/P097_1.java)<br>[P097_2.java](src/ch24/P097_2.java)<br>[P097_3.java](src/ch24/P097_3.java)<br>[P097_4.java](src/ch24/P097_4.java)<br>[P097_5.kt](src/ch24/P097_5.kt) |
+| 98(문제 3) | [주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341) | ★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P098_1.java](src/ch24/P098_1.java)<br>[P098_2.kt](src/ch24/P098_2.kt) |
+| 99(문제 4) | [양궁대회](https://school.programmers.co.kr/learn/courses/30/lessons/92342) | ★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P099_1.java](src/ch24/P099_1.java)<br>[P099_2.kt](src/ch24/P099_2.kt) |
 | 100(문제 5) | [양과 늑대](https://school.programmers.co.kr/learn/courses/30/lessons/92343) | ★★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P100_1.java](src/ch24/P100_1.java)<br>[P100_2.kt](src/ch24/P100_2.kt) |
 | 101(문제 6) | [파괴되지 않은 건물](https://school.programmers.co.kr/learn/courses/30/lessons/92344) | ★★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P101_2.java](src/ch24/P101_2.java)<br>[P101_3.kt](src/ch24/P101_3.kt) |
 | 102(문제 7) | [사라지는 발판](https://school.programmers.co.kr/learn/courses/30/lessons/92345) | ★★★ | 부록. 2022년 카카오 공채 만점 가이드 | [P102_1.java](src/ch24/P102_1.java)<br>[P102_2.kt](src/ch24/P102_2.kt) |
