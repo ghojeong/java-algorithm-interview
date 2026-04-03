@@ -1,6 +1,6 @@
 package ch06
 
-class P3_2 {
+class P03_2 {
     fun reorderLogFiles(logs: Array<String>): Array<String> {
         // 문자 로그를 저장할 문자 리스트
         val letterList = mutableListOf<String>()

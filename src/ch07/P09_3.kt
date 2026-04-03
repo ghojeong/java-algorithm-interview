@@ -2,7 +2,7 @@ package ch07
 
 import java.util.*
 
-class P9_3 {
+class P09_3 {
     fun threeSum(nums: IntArray): List<List<Int>> {
         var left: Int
         var right: Int

@@ -1,6 +1,6 @@
 package ch07
 
-class P8_3 {
+class P08_3 {
     fun trap(height: IntArray): Int {
         var volume = 0
         var left = 0

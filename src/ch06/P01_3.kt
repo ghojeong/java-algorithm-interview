@@ -1,6 +1,6 @@
 package ch06
 
-class P1_3 {
+class P01_3 {
     fun isPalindrome(s: String): Boolean {
         var start = 0
         var end = s.length - 1

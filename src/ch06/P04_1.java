@@ -2,7 +2,7 @@ package ch06;
 
 import java.util.*;
 
-public class P4_1 {
+public class P04_1 {
     public String mostCommonWord(String p, String[] banned) {
         // 금지어 목록이 String 배열이므로, 비교 메소드를 제공하는 Set으로 변경한다.
         Set<String> ban = new HashSet<>(Arrays.asList(banned));

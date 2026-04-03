@@ -213,15 +213,15 @@ JaCoCo 리포트 항목:
 ## 문제 풀이
 | 번호 | 제목 | 난이도 | 장 | 풀이 코드 |
 | --- | --- | ---- | - | --- |
-| 1 | [유효한 팰린드롬](https://leetcode.com/problems/valid-palindrome/) | ★ | 6장. 문자열 조작 | [P1_1.java](src/ch06/P1_1.java)<br>[P1_2.java](src/ch06/P1_2.java)<br>[P1_3.kt](src/ch06/P1_3.kt) |
-| 2 | [문자열 뒤집기](https://leetcode.com/problems/reverse-string/) | ★ | 6장. 문자열 조작 | [P2_1.java](src/ch06/P2_1.java)<br>[P2_2.kt](src/ch06/P2_2.kt) |
-| 3 | [로그 파일 재정렬](https://leetcode.com/problems/reorder-data-in-log-files/) | ★ | 6장. 문자열 조작 | [P3_1.java](src/ch06/P3_1.java)<br>[P3_2.kt](src/ch06/P3_2.kt) |
-| 4 | [가장 흔한 단어](https://leetcode.com/problems/most-common-word/) | ★ | 6장. 문자열 조작 | [P4_1.java](src/ch06/P4_1.java)<br>[P4_2.kt](src/ch06/P4_2.kt) |
-| 5 | [그룹 애너그램](https://leetcode.com/problems/group-anagrams/) | ★★ | 6장. 문자열 조작 | [P5_1.java](src/ch06/P5_1.java)<br>[P5_2.kt](src/ch06/P5_2.kt) |
-| 6 | [가장 긴 팰린드롬 부분 문자열](https://leetcode.com/problems/longest-palindromic-substring/) | ★★ | 6장. 문자열 조작 | [P6_1.java](src/ch06/P6_1.java)<br>[P6_2.kt](src/ch06/P6_2.kt) |
-| 7 | [두 수의 합](https://leetcode.com/problems/two-sum/) | ★ | 7장. 배열 | [P7_1.java](src/ch07/P7_1.java)<br>[P7_2.java](src/ch07/P7_2.java)<br>[P7_3.java](src/ch07/P7_3.java)<br>[P7_4.java](src/ch07/P7_4.java)<br>[P7_5.kt](src/ch07/P7_5.kt) |
-| 8 | [빗물 트래핑](https://leetcode.com/problems/trapping-rain-water/) | ★★★ | 7장. 배열 | [P8_1.java](src/ch07/P8_1.java)<br>[P8_2.java](src/ch07/P8_2.java)<br>[P8_3.kt](src/ch07/P8_3.kt) |
-| 9 | [세 수의 합](https://leetcode.com/problems/3sum/) | ★★ | 7장. 배열 | [P9_1.java](src/ch07/P9_1.java)<br>[P9_2.java](src/ch07/P9_2.java)<br>[P9_3.kt](src/ch07/P9_3.kt) |
+| 1 | [유효한 팰린드롬](https://leetcode.com/problems/valid-palindrome/) | ★ | 6장. 문자열 조작 | [P01_1.java](src/ch06/P01_1.java)<br>[P01_2.java](src/ch06/P01_2.java)<br>[P01_3.kt](src/ch06/P01_3.kt) |
+| 2 | [문자열 뒤집기](https://leetcode.com/problems/reverse-string/) | ★ | 6장. 문자열 조작 | [P02_1.java](src/ch06/P02_1.java)<br>[P02_2.kt](src/ch06/P02_2.kt) |
+| 3 | [로그 파일 재정렬](https://leetcode.com/problems/reorder-data-in-log-files/) | ★ | 6장. 문자열 조작 | [P03_1.java](src/ch06/P03_1.java)<br>[P03_2.kt](src/ch06/P03_2.kt) |
+| 4 | [가장 흔한 단어](https://leetcode.com/problems/most-common-word/) | ★ | 6장. 문자열 조작 | [P04_1.java](src/ch06/P04_1.java)<br>[P04_2.kt](src/ch06/P04_2.kt) |
+| 5 | [그룹 애너그램](https://leetcode.com/problems/group-anagrams/) | ★★ | 6장. 문자열 조작 | [P05_1.java](src/ch06/P05_1.java)<br>[P05_2.kt](src/ch06/P05_2.kt) |
+| 6 | [가장 긴 팰린드롬 부분 문자열](https://leetcode.com/problems/longest-palindromic-substring/) | ★★ | 6장. 문자열 조작 | [P06_1.java](src/ch06/P06_1.java)<br>[P06_2.kt](src/ch06/P06_2.kt) |
+| 7 | [두 수의 합](https://leetcode.com/problems/two-sum/) | ★ | 7장. 배열 | [P07_1.java](src/ch07/P07_1.java)<br>[P07_2.java](src/ch07/P07_2.java)<br>[P07_3.java](src/ch07/P07_3.java)<br>[P07_4.java](src/ch07/P07_4.java)<br>[P07_5.kt](src/ch07/P07_5.kt) |
+| 8 | [빗물 트래핑](https://leetcode.com/problems/trapping-rain-water/) | ★★★ | 7장. 배열 | [P08_1.java](src/ch07/P08_1.java)<br>[P08_2.java](src/ch07/P08_2.java)<br>[P08_3.kt](src/ch07/P08_3.kt) |
+| 9 | [세 수의 합](https://leetcode.com/problems/3sum/) | ★★ | 7장. 배열 | [P09_1.java](src/ch07/P09_1.java)<br>[P09_2.java](src/ch07/P09_2.java)<br>[P09_3.kt](src/ch07/P09_3.kt) |
 | 10 | [배열 파티션 I](https://leetcode.com/problems/array-partition/) | ★ | 7장. 배열 | [P10_1.java](src/ch07/P10_1.java)<br>[P10_2.java](src/ch07/P10_2.java)<br>[P10_3.kt](src/ch07/P10_3.kt) |
 | 11 | [자신을 제외한 배열의 곱](https://leetcode.com/problems/product-of-array-except-self/) | ★★ | 7장. 배열 | [P11_1.java](src/ch07/P11_1.java)<br>[P11_2.kt](src/ch07/P11_2.kt) |
 | 12 | [주식을 사고팔기 가장 좋은 시점](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | ★ | 7장. 배열 | [P12_1.java](src/ch07/P12_1.java)<br>[P12_2.java](src/ch07/P12_2.java)<br>[P12_3.kt](src/ch07/P12_3.kt) |

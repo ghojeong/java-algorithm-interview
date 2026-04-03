@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-public class P9_1 {
+public class P09_1 {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> results = new LinkedList<>();
         Arrays.sort(nums);

@@ -3,7 +3,7 @@ package ch07;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class P8_2 {
+public class P08_2 {
     public int trap(int[] height) {
         Deque<Integer> stack = new ArrayDeque<>();
         int volume = 0;

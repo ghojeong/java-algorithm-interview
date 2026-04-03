@@ -3,7 +3,7 @@ package ch07;
 import java.util.HashMap;
 import java.util.Map;
 
-public class P7_3 {
+public class P07_3 {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> numsMap = new HashMap<>();
         // 하나의 for 반복으로 통합

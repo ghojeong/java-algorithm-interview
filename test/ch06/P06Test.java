@@ -4,16 +4,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-class P6Test {
+class P06Test {
     @Test
-    void P6_1() {
-        P6_1 s = new P6_1();
+    void P06_1() {
+        P06_1 s = new P06_1();
         assertEquals("dcbabcd", s.longestPalindrome("dcbabcdd"));
     }
 
     @Test
-    void P6_2() {
-        P6_2 s = new P6_2();
+    void P06_2() {
+        P06_2 s = new P06_2();
         assertEquals("dcbabcd", s.longestPalindrome("dcbabcdd"));
     }
 }

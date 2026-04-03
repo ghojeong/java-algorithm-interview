@@ -2,7 +2,7 @@ package ch06
 
 import kotlin.collections.ArrayList
 
-class P5_2 {
+class P05_2 {
     fun groupAnagrams(strs: Array<String>): List<List<String>> {
         val results: MutableMap<String, MutableList<String>> = mutableMapOf()
 

@@ -1,6 +1,6 @@
 package ch06
 
-class P4_2 {
+class P04_2 {
     fun mostCommonWord(paragraph: String, banned: Array<String>): String {
         // 각 단어별 개수가 저장될 키-값 맵
         val counts: MutableMap<String, Int> = mutableMapOf()

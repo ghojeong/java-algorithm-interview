@@ -1,6 +1,6 @@
 package ch06
 
-class P6_2 {
+class P06_2 {
     var left: Int = 0
     var maxLen: Int = 0
 

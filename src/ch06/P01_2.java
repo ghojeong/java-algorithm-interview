@@ -1,6 +1,6 @@
 package ch06;
 
-class P1_2 {
+class P01_2 {
     public boolean isPalindrome(String s) {
         // 정규식으로 유효한 문자만 추출한 다음 모두 소문자로 변경
         String s_filtered = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase();

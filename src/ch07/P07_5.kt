@@ -1,6 +1,6 @@
 package ch07
 
-class P7_5 {
+class P07_5 {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val numsMap: MutableMap<Int, Int> = mutableMapOf()
         // 하나의 for 반복으로 통합

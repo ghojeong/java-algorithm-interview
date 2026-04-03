@@ -1,6 +1,6 @@
 package ch06;
 
-class P1_1 {
+class P01_1 {
     public boolean isPalindrome(String s) {
         int start = 0;
         int end = s.length() - 1;

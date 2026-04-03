@@ -1,6 +1,6 @@
 package ch06;
 
-public class P2_1 {
+public class P02_1 {
     public void reverseString(char[] s) {
         int start = 0;
         int end = s.length - 1;

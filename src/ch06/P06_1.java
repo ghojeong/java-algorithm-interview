@@ -1,6 +1,6 @@
 package ch06;
 
-public class P6_1 {
+public class P06_1 {
     int left, maxLen;
 
     public void extendPalindrome(String s, int j, int k) {

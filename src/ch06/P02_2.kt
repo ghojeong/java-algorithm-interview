@@ -1,6 +1,6 @@
 package ch06
 
-class P2_2 {
+class P02_2 {
     fun reverseString(s: CharArray) {
         var start = 0
         var end = s.size - 1

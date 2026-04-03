@@ -3,7 +3,7 @@ package ch07;
 import java.util.HashMap;
 import java.util.Map;
 
-public class P7_2 {
+public class P07_2 {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> numsMap = new HashMap<>();
         // 키와 값을 바꿔서 맵으로 저장

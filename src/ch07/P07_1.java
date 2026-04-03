@@ -1,6 +1,6 @@
 package ch07;
 
-public class P7_1 {
+public class P07_1 {
     public int[] twoSum(int[] nums, int target) {
         // 입력값 배열을 처음부터 순회
         for (int i = 0; i < nums.length; i++) {

@@ -3,7 +3,7 @@ package ch06;
 import java.util.ArrayList;
 import java.util.List;
 
-public class P3_1 {
+public class P03_1 {
     public String[] reorderLogFiles(String[] logs) {
         // 문자 로그를 저장할 문자 리스트
         List<String> letterList = new ArrayList<>();

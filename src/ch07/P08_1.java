@@ -1,6 +1,6 @@
 package ch07;
 
-public class P8_1 {
+public class P08_1 {
     public int trap(int[] height) {
         int volume = 0;
         int left = 0;
